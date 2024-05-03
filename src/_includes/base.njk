@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<title>{{ title }} / {{ site.title }}</title>
+
+	<!-- Meta -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | url }}">
+	
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
+
+	<!-- Scripts -->
+	<script src="/js/script.js" defer></script>
+	<script src="/js/now.js" defer></script>
+	{% block scripts %}
+
+	{% endblock %}
+	<style>
+	{% block style %}
+
+	{% endblock %}
+	</style>
+</head>
+
+<body>
+	<script>
+		if (typeof(theme) === 'undefined') { let theme = null; }
+		theme = localStorage.getItem('theme') || 'system';
+		document.documentElement.dataset.theme = theme;
+	</script>
+
+	<header>
+		<div id="mainlogo">
+			<a href="/">
+			<img id="emblem" src="/img/logo.png">
+			<div id="logotype">
+				<div id="name">{{site.title}}</div>
+				<div id="subtitle">{{ site.subtitle }}</div>
+			</div>
+			</a>
+		</div>
+		<div id="news">
+			<div id="newsBubble">...</div>
+			<div id="newsDate">(news)</div>
+		</div>
+		<button id="lightToggle">
+			<i id="lighticon" class="fa-solid fa-sun"></i>
+		</button>
+	</header>
+
+	<nav>
+		{% for entry in collections.all | eleventyNavigation %}
+			<div id="{{ entry.title | slugify }}" class="nav-item">
+		{% endfor %}
+	</nav>
+
+	<main>
+		{% block content %}
+		{{ content | safe }}
+		{% endblock %}
+	</main>
+
+	<footer>
+		<span>&copy; {{ site.title }} <span id="currentYear">2024</span> </span>
+		<script>
+			document.getElementById("currentYear").innerText = new Date().getFullYear();
+		</script>
+		<a href="#"><span id="toTop">↑</span></a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+
+{% block content %}
+	
+<h1>{{ title }}</h1>
+<date>{{ date | readableDate }}</date>
+
+<img class="poster" src="/img/posters/{{ poster }}"></img>
+
+<article>
+{{ content | safe }}
+</article>
+
+{% endblock %}

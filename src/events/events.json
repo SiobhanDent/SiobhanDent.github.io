@@ -1,0 +1,9 @@
+{
+	"tags": ["events"],
+	"category": "events",
+	"layout": "event-post.njk",
+	"eleventyNavigation": {
+		"parent": "Blog"
+	},
+	"image": ""
+}

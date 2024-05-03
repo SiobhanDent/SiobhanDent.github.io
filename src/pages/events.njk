@@ -1,0 +1,15 @@
+---
+title: All Events
+layout: base.njk
+permalink: /events/
+---
+
+<h1>All Events</h1>
+
+This is where all our events will go.
+
+<ul>
+{% for event in collections.events | reverse %}
+	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> </li>
+{% endfor %}
+</ul>
