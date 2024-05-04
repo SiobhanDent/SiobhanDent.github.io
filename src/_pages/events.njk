@@ -2,6 +2,8 @@
 title: All Events
 layout: base.njk
 permalink: /events/
+eleventyImport:
+	collections: ["upcoming", "recurring", "events"]
 ---
 
 <h1>Upcoming Events</h1>
@@ -9,7 +11,7 @@ permalink: /events/
 This is where all our events will go.
 
 <ul>
-{% for event in collections.events %}
+{% for event in collections.upcoming %}
 	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> 
 	/ <span> {{ event.data.blurb }} </span>
 	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
@@ -22,8 +24,8 @@ This is where all our events will go.
 <h1>Recurring Events</h1>
 
 <ul>
-{% for event in collections.events | reverse %}
-	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> 
+{% for event in collections.recurring %}
+	<li> <a href="{{event.url}}">{{ event.data.title }}</a>
 	/ <span> {{ event.data.blurb }} </span>
 	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
 	</li>

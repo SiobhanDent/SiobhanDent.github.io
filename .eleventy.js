@@ -36,6 +36,43 @@ module.exports = function(config) {
 
 	// -------------------------------------------------------------------- //
 	// Collections
+	var current = new Date();
+	current.setDate(current.getDate() - 1);
+
+	config.addCollection("upcoming", (collection) => {
+		return collection.getFilteredByTag('events').filter((item) => {
+			return item.data.date > current;
+		});
+	});
+
+	config.addCollection("past", (collection) => {
+		return collection.getFilteredByTag('events').filter((item) => {
+			return item.data.date < current;
+		});
+	});
+
+	config.addCollection("recurring", (collection) => {
+		return collection.getFilteredByTag('events').filter((item) => {
+			return item.data.date == undefined;
+		})
+	});
+
+	config.addCollection("byYear", (collection) => {
+		const posts = collection.getFilteredByTag('events').reverse();
+		const years = posts.map(post => post.date.getFullYear());
+		const uniqueYears = [...new Set(years)];
+
+		const postsByYear = uniqueYears.reduce((prev, year) => {
+			const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
+
+			return [
+				...prev,
+				[year, filteredPosts]
+			]
+		}, []);
+
+		return postsByYear;
+	});
 
 	// -------------------------------------------------------------------- //
 	// Filters
