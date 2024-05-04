@@ -8,7 +8,7 @@ permalink: /past-events/
 
 This is where all our events will go.
 
-<ul>
+<ul class="event-list">
 {% for event in collections.past | reverse %}
 	<li> <a href="{{event.url}}">
 	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img></a>

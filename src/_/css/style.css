@@ -40,7 +40,7 @@ body {
 	flex-flow: column;
 	justify-content: space-between;
 
-	width: 100vw; height: 100vh;
+	width: 100%; height: 100vh;
 	margin: 0;
 	padding: 1em;
 
@@ -59,11 +59,11 @@ header {
 
 #logo {
 	max-height: 100%;
+	transition: transform 0.5s ease;
 }
 
 #logo:hover {
 	transform: rotate(-5deg);
-	transition: transform 0.5s ease;
 }
 
 nav ul {
@@ -214,9 +214,25 @@ section.frame {
 
 
 .poster-thumb {
-	width: 20%;
+	width: 100%;
 }
 
+.event-list {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+}
+
+.event-list li {
+	flex-basis: calc(33% - 16px);
+	display: block;
+	margin: 8px;
+	aspect-ratio: 1;
+}
+
+.event-list li a {
+	display: block;
+}
 
 @media screen and (max-width: 800px) {
 	body { font-size: 1em; }
