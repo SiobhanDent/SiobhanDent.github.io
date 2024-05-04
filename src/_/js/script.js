@@ -14,7 +14,11 @@ function setTheme(theme) {
 	document.documentElement.dataset.theme = theme;
 	// Update Icons/Emblems
 	if (theme == 'light') {
+		lightIcon.classList.remove("fa-sun");
+		lightIcon.classList.add("fa-moon");
 	} else {
+		lightIcon.classList.remove("fa-moon");
+		lightIcon.classList.add("fa-sun");
 	}
 }
 
