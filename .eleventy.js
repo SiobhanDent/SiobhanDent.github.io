@@ -69,6 +69,7 @@ module.exports = function(config) {
 		markdownTemplateEngine: 'njk',
 		dir: {
 			input: "src",
+			data: "_includes/_data",
 			output: "build"
 		}
 	}

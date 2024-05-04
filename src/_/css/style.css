@@ -82,3 +82,8 @@ footer {
 	color: var(--grey);
 	padding: 1em;	
 }
+
+hr {
+	border: 1px solid var(--grey);
+	width: 100%;
+}

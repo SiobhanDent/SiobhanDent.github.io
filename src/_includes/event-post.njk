@@ -7,8 +7,14 @@
 
 <img class="poster" src="/img/posters/{{ poster }}"></img>
 
+<h2>{{ blurb }}</h2>
+
 <article>
 {{ content | safe }}
 </article>
+
+<hr>
+{% include "partials/map.njk" %}
+<hr>
 
 {% endblock %}

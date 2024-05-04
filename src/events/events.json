@@ -4,6 +4,5 @@
 	"layout": "event-post.njk",
 	"eleventyNavigation": {
 		"parent": "Blog"
-	},
-	"image": ""
+	}
 }
