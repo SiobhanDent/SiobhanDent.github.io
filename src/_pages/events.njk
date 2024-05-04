@@ -4,14 +4,32 @@ layout: base.njk
 permalink: /events/
 ---
 
-<h1>All Events</h1>
+<h1>Upcoming Events</h1>
 
 This is where all our events will go.
+
+<ul>
+{% for event in collections.events %}
+	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> 
+	/ <span> {{ event.data.blurb }} </span>
+	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
+	</li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<h1>Recurring Events</h1>
 
 <ul>
 {% for event in collections.events | reverse %}
 	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> 
 	/ <span> {{ event.data.blurb }} </span>
+	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
 	</li>
 {% endfor %}
 </ul>
+
+<hr>
+
+<a href="/past-events/">See past events.</a>
