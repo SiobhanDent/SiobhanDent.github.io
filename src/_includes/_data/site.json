@@ -2,9 +2,10 @@
 	"title": "Sabby!",
 	"subtitle": "Gallery ✧ Events ✧ Coworking ✧ Rentals",
 	"description": "Gallery ✧ Events ✧ Coworking ✧ Rentals",
-	"url": "https://sabbatical.gallery/",
+	"url": "https://sabby.gallery/",
 	"email": "info@sabbatical.gallery",
-	"members": [
+	"address": "141 Victoria Parade, Collingwood (not Fitzroy)",
+	"people": [
 		{
 			"name": "Null Cogendo",
 			"link": "https://sabbatical.gallery"
@@ -13,5 +14,10 @@
 			"name": "Siobhan Dent",
 			"link": "https://sabbatical.gallery"
 		}
-	]
+	],
+	"link": {
+		"instagram": "https://www.instagram.com/sabby_gally/",
+		"discord": "https://discord.com/invite/5uRbFg2QXa",
+		"twitter": "https://twitter.com/sabby_gally/"
+	}
 }
