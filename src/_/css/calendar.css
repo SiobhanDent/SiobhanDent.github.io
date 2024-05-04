@@ -1,0 +1,59 @@
+
+#calendar-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#calendar ul {
+	margin: 0;
+	padding: 1px;
+}
+
+#calendar-title {
+	color: white;
+	background: var(--blue);
+	width: 100%;
+	padding: 1em;
+	margin: 0;
+}
+
+#calendar-days, #calendar-weekdays {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 2px;
+	padding: 8px 16px;
+	background: white;
+}
+
+#calendar-weekdays li {
+	font-size: 0.75em;
+	text-align: center;
+
+}
+
+#calendar li {
+	width: calc(100% / 7);
+}
+
+#calendar-days li {
+	aspect-ratio: 1 / 1;
+	border: 1px dotted var(--yellow);
+	padding: 0;
+}
+.day-inactive {
+	color: grey;
+}
+
+.day-active {
+
+}
+
+.day-current {
+	background: red;
+}
+
+.calendar-link {
+	font-size: 0.8em;
+}

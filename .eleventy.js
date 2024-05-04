@@ -68,7 +68,7 @@ module.exports = function(config) {
 			return [
 				...prev,
 				[year, filteredPosts]
-			]
+			];
 		}, []);
 
 		return postsByYear;
@@ -86,6 +86,39 @@ module.exports = function(config) {
 	config.addFilter('md', (content) => {
 		return md.render(content);
 	});
+
+
+	// -------------------------------------------------------------------- //
+	// CALENDAR BUSINESS
+
+	// Filter: Get Day
+	config.addNunjucksGlobal("getDate", (dateObj) => {
+		return dateObj.getDate();
+	});
+
+	// Nunjucks Globals
+  	let now = new Date();
+  	const daysInMonth = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+  	const firstDay = new Date(now.setDate(1)).getDay();
+  	const lastDay = new Date(now.setDate(daysInMonth)).getDay();
+  	const prevLastDate = new Date(now.setDate(0)).getDate();
+
+	const currentMonthDays = [...Array(daysInMonth)].map((_, i) => i + 1);
+  	const prevMonthDays = [...Array(firstDay - 1)].map((_, i) => prevLastDate - i).reverse();
+  	const nextMonthDays = (lastDay < 7) ? [...Array(7 - lastDay)].map((_, i) => i + 1) : [];
+	
+	// Integers
+	config.addNunjucksGlobal("daysInMonth", daysInMonth);
+	config.addNunjucksGlobal("firstDay", firstDay);
+	config.addNunjucksGlobal("lastDay", lastDay);
+	config.addNunjucksGlobal("prevLastDate", prevLastDate);
+
+	// Arrays
+	config.addNunjucksGlobal("currentMonthDays", currentMonthDays);
+	config.addNunjucksGlobal("prevMonthDays", prevMonthDays);
+	config.addNunjucksGlobal("nextMonthDays", nextMonthDays);
+
+	console.log(prevMonthDays, currentMonthDays, nextMonthDays);
 
 	// -------------------------------------------------------------------- //
 	// Plugins
