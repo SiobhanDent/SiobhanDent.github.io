@@ -2,21 +2,29 @@
 
 {% block content %}
 	
-<h1>{{ title }}</h1>
-{% if date %}<date>{{ date | readableDate }}</date>{% endif %}
-	
-<img class="poster" src="/img/posters/{{ poster }}"></img>
+<section id="event" class="flex-col" >	
+	<div class="title">
+		<h1>{{ title }}</h1>
+		{% if date %}<date>{{ date | readableDate }}</date>{% endif %}
+	</div>
 
-<h2>{{ blurb }}</h2>
+	<img class="poster flex-child" src="/img/posters/{{ poster }}"></img>
 
-<article>
-{{ content | safe }}
-</article>
+	<article id="description" class="flex-child">
+	<h2>{{ blurb }}</h2>
+	{{ content | safe }}
+	</article>
+</section>
 
 <hr>
 {% include "partials/map.njk" %}
 <hr>
 
-<a href="/events/">See more events.</a>
+
+<section class="frame" style="--frameBg: var(--grey)">
+	<h1>
+		<a href="/events/">See more events.</a>
+	</h1>
+</section>
 
 {% endblock %}

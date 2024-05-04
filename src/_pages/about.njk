@@ -4,14 +4,27 @@ layout: base.njk
 permalink: /about/
 ---
 
+<section>
 <h1>About Sabby</h1>
 
-<h3>What</h3>
+<p>Located in what used to be a Banh Mì place on Victoria Parade in Collingwood, Sabby is a gathering place by and for artists, game makers, crafters and zinesters of Melbourne.</p>
 
-<p>Yeah...</p>
+<p>Sabby strives to be a <a href="/safe-spaces/">safe and inclusive space</a> that can be enjoyed by everyone.</p>
 
-<h3>Who</h3>
+<h3>What Sabby does</h3>
 
-<p>Yeah...</p>
+<p><p>Sabby is a co-working space, a gallery space, an events and functions space, a casual hang out space.</p></p>
+
+<h3>People of Sabby</h3>
+
+<p>Sabby has been operating as a community space since 2022, and is maintained by these people:</p>
+<ul>
+	{% for person in site.people %}
+		<li><a href="{{person.link}}" target="_blank">{{person.name}}</a></li>
+	{% endfor %}
+</ul>
+</section>
+
+<hr>
 
 {% include "partials/map.njk" %}

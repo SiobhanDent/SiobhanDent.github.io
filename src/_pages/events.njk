@@ -6,32 +6,47 @@ eleventyImport:
 	collections: ["upcoming", "recurring", "events"]
 ---
 
-<h1>Upcoming Events</h1>
+<style>.frame { --frameBg: var(--grey) }</style>
 
-This is where all our events will go.
+<section id="upcoming">
+	<h1>Upcoming Events</h1>
 
-<ul class="event-list">
-{% for event in collections.upcoming %}
-	<li> <a href="{{event.url}}">{{ event.data.title }}</a> <i>( {{ event.data.date | readableDate }} )</i> 
-	/ <span> {{ event.data.blurb }} </span>
-	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
-	</li>
-{% endfor %}
-</ul>
+	These are the events happening this month!
 
-<hr>
+	<ul class="event-list">
+	{% for event in collections.upcoming %}
+		<li>
+		<a href="{{event.url}}"><img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></a>
+		<p><a href="{{event.url}}">{{ event.data.title }}</a>
 
-<h1>Recurring Events</h1>
-
-<ul class="event-list">
-{% for event in collections.recurring %}
-	<li> <a href="{{event.url}}">{{ event.data.title }}</a>
-	/ <span> {{ event.data.blurb }} </span>
-	<img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></img>
-	</li>
-{% endfor %}
-</ul>
+		<br>{{ event.data.blurb }}</p>
+		<i>{{ event.data.date | readableDate }} </i>
+		</li>
+	{% endfor %}
+	</ul>
+</section>
 
 <hr>
 
-<a href="/past-events/">See past events.</a>
+<section id="recurring">
+	<h1>Recurring Events</h1>
+
+	These are our weekly recurring events!
+
+	<ul class="event-list">
+	{% for event in collections.recurring %}
+		<li> 
+		<a href="{{event.url}}"><img class="poster-thumb" src="/img/posters/{{ event.data.poster }}"></a>
+		<p><a href="{{event.url}}">{{ event.data.title }}</a>
+
+		<br>{{ event.data.blurb }}</p>
+		</li>
+	{% endfor %}
+	</ul>
+</section>
+
+<hr>
+
+<section class="frame">
+	<h1><a href="/past-events/">See past events.</a></h1>
+</section>
