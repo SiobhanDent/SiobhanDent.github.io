@@ -3,8 +3,8 @@
 {% block content %}
 	
 <h1>{{ title }}</h1>
-<date>{{ date | readableDate }}</date>
-
+{% if date %}<date>{{ date | readableDate }}</date>{% endif %}
+	
 <img class="poster" src="/img/posters/{{ poster }}"></img>
 
 <h2>{{ blurb }}</h2>
