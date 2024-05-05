@@ -13,11 +13,21 @@
 		{
 			"name": "Siobhan Dent",
 			"link": "https://sabbatical.gallery"
+		},
+		{
+			"name": "David Ma",
+			"link": "https://sabbatical.gallery"
+		},
+		{
+			"name": "Grace Tang",
+			"link": "https://sabbatical.gallery"
 		}
 	],
 	"link": {
 		"instagram": "https://www.instagram.com/sabby_gally/",
 		"discord": "https://discord.com/invite/5uRbFg2QXa",
-		"twitter": "https://twitter.com/sabby_gally/"
+		"twitter": "https://twitter.com/sabby_gally/",
+		"bookings": "https://forms.gle/miDkf5UD1S2HXDrs8",
+		"email": "mailto:info@sabbatical.gallery"
 	}
 }
