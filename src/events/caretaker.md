@@ -8,4 +8,4 @@ Repairs, cleaning, D.I.Y., there are plenty of things to do at Sabby on Fridays.
 
 Come by and help out if you want to!
 
-Weekly tasks are posted in the *#caretaker* channel on our <a href="https://discord.gg/5uRbFg2QXa" target="_blank">Discord</a>.
+Weekly tasks are posted in the *#caretaker* channel on our <a href="{{ site.link.discord }}" target="_blank">Discord</a>.
