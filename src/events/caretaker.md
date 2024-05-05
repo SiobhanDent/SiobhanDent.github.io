@@ -1,6 +1,6 @@
 ---
 title: Caretaker Fridays
-poster: "test-poster.png"
+poster: "Caretaker-Callout.jpg"
 blurb: "Help make this space stay amazing."
 ---
 
