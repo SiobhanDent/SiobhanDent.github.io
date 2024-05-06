@@ -23,27 +23,24 @@
 	font-style: italic;
 }
 
-#calendar ul {
+#calendar table {
 	margin: 0;
-	padding: 1px;
-
+	width: 100%;
 	max-width: 800px;
+	border-spacing: 0;
+	border: 0;
+	table-layout: fixed;
 }
 
 #calendar-title {
 	color: var(--pink);
 	border-bottom: 4px solid var(--pink);
-
 	width: 100%;
 	padding: 1em;
 	margin: 0;
 }
 
-#calendar-days, #calendar-weekdays {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-
+#calendar-days {
 	background: var(--light);
 	color: var(--dark);
 }
@@ -52,33 +49,29 @@
 	background: var(--pink);
 }
 
-#calendar-weekdays li {
+#calendar td {
 	font-size: 0.75em;
-	text-align: center;
-}
-
-#calendar li {
 	width: calc(100% / 7);
-}
-
-#calendar-days li {
+	height: 4rem;
 	aspect-ratio: 1 / 1;
-
 	border-bottom: 1px dotted var(--yellow);
 	border-right: 1px dotted var(--yellow);
-
 	padding-inline: 4px;
+	text-align: left;
+	vertical-align: top;
 }
 
 .day-inactive {
+	background-color: #f5e2c0;
 	color: grey;
 }
 
 .day-active {
 }
 
-.day-current {
-	background: red;
+.day-current, .day-current a {
+	background: var(--pink);
+	color: var(--light);
 }
 
 .calendar-link {

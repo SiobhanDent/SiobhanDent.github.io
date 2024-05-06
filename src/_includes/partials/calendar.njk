@@ -4,35 +4,45 @@
 <div id="calendar-wrapper">
 	<div id="calendar">
 		<h3 id="calendar-title"> ... </h3>
-		<ul id="calendar-weekdays">
-			<li>Mon*</li>
-			<li>Tue*</li>
-			<li>Wed</li>
-			<li>Thu</li>
-			<li>Fri**</li>
-			<li>Sat</li>
-			<li>Sun</li>
-		</ul>
-		<ul id="calendar-days">
+		<table id="calendar-days">
+			<thead id="calendar-weekdays">
+				<th>Mon*</th>
+				<th>Tue*</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri**</th>
+				<th>Sat</th>
+				<th>Sun</th>
+			</thead>
+			<tbody>
+				{% set x = 0 %}
+				<tr>
+					{% for day in prevMonthDays %}
+						<td class="day-inactive">{{day}}</td>
+						{% set x = x + 1 %}
+						{% if x == 7 -%} </tr><tr> {%- set x = 0 %} {% endif %}
+					{% endfor %}
 
-		{% for day in prevMonthDays %}
-			<li class="day-inactive">{{day}}</li>
-		{% endfor %}
+					{% for day in currentMonthDays -%}
+						<td class="day-active">{{- day -}}
+						{%- for event in collections.upcoming -%}
+							{%- if getDate(event.data.date) == day -%}
+								<a class="calendar-link" href="{{ event.url }}">{{event.data.title}}</a>
+							{%- endif -%}
+						{%- endfor -%}
+						</td>
+						{% set x = x + 1 %}
+						{% if x == 7 -%} </tr><tr> {%- set x = 0 %} {% endif %}
+					{% endfor %}
 
-		{% for day in currentMonthDays -%}
-			<li class="day-active">{{- day -}}
-			{%- for event in collections.upcoming -%}
-				{%- if getDate(event.data.date) == day -%}
-					<a class="calendar-link" href="{{ event.url }}">{{event.data.title}}</a>
-				{%- endif -%}
-			{%- endfor -%}
-			</li>
-		{% endfor %}
-
-		{% for day in nextMonthDays %}
-			<li class="day-inactive">{{day}}</li>
-		{% endfor %}
-		</ul>
+					{% for day in nextMonthDays %}
+						<td class="day-inactive">{{day}}</td>
+						{% set x = x + 1 %}
+						{% if x == 7 -%} </tr><tr> {%- set x = 0 %} {% endif %}
+					{% endfor %}
+				</tr>
+			</tbody>
+		</table>
 
 		<p>*Sabby is open for <a href="/events/coworking">Co-Working</a> every Monday and Tuesday.<br>**Sabby is open for <a href="/events/caretaker/">Caretaker Fridays</a> every Friday.</p>
 	</div>
