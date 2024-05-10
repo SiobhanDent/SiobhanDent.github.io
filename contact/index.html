@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<title>Contact / Sabby!</title>
+
+	<!-- Meta -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
+
+	<!-- Scripts -->
+	<script src="/js/script.js" defer></script>
+	
+
+	
+	<style>
+	
+
+	
+	</style>
+</head>
+
+<body>
+	<script>
+		if (typeof(theme) === 'undefined') { let theme = null; }
+		theme = localStorage.getItem('theme') || 'system';
+		document.documentElement.dataset.theme = theme;
+	</script>
+
+	<header>
+		<a href="/" title="Home" id="masthead">
+			<img id="logo" src="/img/logo.png">
+			<!--<div id="subtitle">Gallery ✧ Events ✧ Coworking ✧ Rentals</div>-->
+		</a>
+		<nav>
+			<ul>
+				<li><button onclick="document.location='/events/'">What's On</button></li>
+				<li><button onclick="document.location='/about/'">About</button></li>
+				<li><button onclick="document.location='/contact/'">Contact</button></li>
+				<li><button id="lightToggle"><i id="lighticon" class="fa-solid fa-sun"></i></button></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+			
+			
+<section id="contact">
+	<h1>Get in touch!</h1>
+
+	<p>For general inquiries, you can contact us directly via email at <a href="mailto:info@sabbatical.gallery">info [at] sabbatical.gallery</a>, or ask any question in the <a href="https://discord.com/invite/5uRbFg2QXa" target="_blank">Sabby Discord</a>.</p>
+
+	<p>We would love to hear from you!</p>
+</section>
+
+<hr>
+
+<section id="booking">
+	<h2>Your next event at Sabby?</h2>
+	<p><i>Need an affordable event space</i>?</p>
+	<p>Sabby is open for event bookings both public and private.</p>
+	<p>Game jams, launch parties, gallery shows, playtest sessions, birthday parties, film screenings, book clubs... Sabby can do it all!</p>
+	<p>Tell us about your event! Just fill out the <a href="https://forms.gle/miDkf5UD1S2HXDrs8" target="_blank">application form</a>, and we'll get back to you ASAP!</p>
+</section>
+
+<hr>
+
+<section id="socials" class="frame flex-col">
+	<h3 style="margin: 4px;">Socials</h3>
+	<ul class="flex-child">
+		<li><a href="https://www.instagram.com/sabby_gally/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+		<li><a href="https://twitter.com/sabby_gally/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+		<li><a href="https://discord.com/invite/5uRbFg2QXa" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+	</ul>
+	<div class="flex-child">
+		<p>Follow us on social media and join our Discord!</p>
+	</div>
+</section>
+			
+	</main>
+
+	<footer>
+		<span>Sabby! &copy; <span id="currentYear">2024</span> / <a href="/safe-spaces">Safe Space Policy</a> </span>
+		<script>
+			document.getElementById("currentYear").innerText = new Date().getFullYear();
+		</script>
+		<span>website by cecile and andy</span>
+		<a href="#"><span id="toTop">Back to Top ↑</span></a>
+	</footer>
+</body>
+</html>

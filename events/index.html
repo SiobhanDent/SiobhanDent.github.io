@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<title>All Events / Sabby!</title>
+
+	<!-- Meta -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
+
+	<!-- Scripts -->
+	<script src="/js/script.js" defer></script>
+	
+
+	
+	<style>
+	
+
+	
+	</style>
+</head>
+
+<body>
+	<script>
+		if (typeof(theme) === 'undefined') { let theme = null; }
+		theme = localStorage.getItem('theme') || 'system';
+		document.documentElement.dataset.theme = theme;
+	</script>
+
+	<header>
+		<a href="/" title="Home" id="masthead">
+			<img id="logo" src="/img/logo.png">
+			<!--<div id="subtitle">Gallery ✧ Events ✧ Coworking ✧ Rentals</div>-->
+		</a>
+		<nav>
+			<ul>
+				<li><button onclick="document.location='/events/'">What's On</button></li>
+				<li><button onclick="document.location='/about/'">About</button></li>
+				<li><button onclick="document.location='/contact/'">Contact</button></li>
+				<li><button id="lightToggle"><i id="lighticon" class="fa-solid fa-sun"></i></button></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+			
+			
+<style>.frame { --frameBg: var(--grey) }</style>
+
+<section id="upcoming">
+	<h1>Upcoming Events</h1>
+
+	These are the events happening this month! You can also check out the <a href="/calendar/">calendar view</a>.
+
+	<ul class="event-list">
+	
+		<li>
+		<a href="/events/2024/05-ps2-book-club/"><img class="poster-thumb" src="/img/posters/PS2BookClub-May2024.jpg"></a>
+		<p><a href="/events/2024/05-ps2-book-club/">PS2 Book Club</a>
+
+		<br>A book club for retro games !?</p>
+		<i>14 May 2024 </i>
+		</li>
+	
+		<li>
+		<a href="/events/2024/05-zine-club/"><img class="poster-thumb" src="/img/posters/ZineClub-May2024.jpg"></a>
+		<p><a href="/events/2024/05-zine-club/">Zine Club</a>
+
+		<br>Zine Club is back in May!</p>
+		<i>18 May 2024 </i>
+		</li>
+	
+		<li>
+		<a href="/events/2024/05-table-flip/"><img class="poster-thumb" src="/img/posters/TableFlip-May2024.jpg"></a>
+		<p><a href="/events/2024/05-table-flip/">Table Flip</a>
+
+		<br>Board Game Night!</p>
+		<i>21 May 2024 </i>
+		</li>
+	
+		<li>
+		<a href="/events/2024/05-market-day/"><img class="poster-thumb" src="/img/posters/MarketDay-May2024.jpg"></a>
+		<p><a href="/events/2024/05-market-day/">Market Day</a>
+
+		<br>Market day at Sabby!</p>
+		<i>25 May 2024 </i>
+		</li>
+	
+		<li>
+		<a href="/events/2024/05-wip-night/"><img class="poster-thumb" src="/img/posters/WIPNight-May2024.jpg"></a>
+		<p><a href="/events/2024/05-wip-night/">WIP Night</a>
+
+		<br>Present something, get feedback.</p>
+		<i>28 May 2024 </i>
+		</li>
+	
+	</ul>
+</section>
+
+<hr>
+
+<section id="recurring">
+	<h1>Recurring Events and EOI</h1>
+
+	These are our weekly recurring events, and current Expressions of Interest.
+
+	<ul class="event-list">
+	
+		<li> 
+		<a href="/events/bookings/"><img class="poster-thumb" src="/img/posters/Booking-Callout.jpg"></a>
+		<p><a href="/events/bookings/">Book an Event</a>
+
+		<br>Sabby is open for event bookings!</p>
+		</li>
+	
+		<li> 
+		<a href="/events/caretaker/"><img class="poster-thumb" src="/img/posters/Caretaker-Callout.jpg"></a>
+		<p><a href="/events/caretaker/">Caretaker Fridays</a>
+
+		<br>Help make this space stay amazing.</p>
+		</li>
+	
+		<li> 
+		<a href="/events/coworking/"><img class="poster-thumb" src="/img/posters/Cowork-Callout.jpg"></a>
+		<p><a href="/events/coworking/">Co-Working</a>
+
+		<br>Mondays and Tuesdays from 11 a.m. to 6 p.m.</p>
+		</li>
+	
+	</ul>
+</section>
+
+<hr>
+
+<section class="frame">
+	<h1><a href="/past-events/">See past events.</a></h1>
+</section>
+			
+	</main>
+
+	<footer>
+		<span>Sabby! &copy; <span id="currentYear">2024</span> / <a href="/safe-spaces">Safe Space Policy</a> </span>
+		<script>
+			document.getElementById("currentYear").innerText = new Date().getFullYear();
+		</script>
+		<span>website by cecile and andy</span>
+		<a href="#"><span id="toTop">Back to Top ↑</span></a>
+	</footer>
+</body>
+</html>
