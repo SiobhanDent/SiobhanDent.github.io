@@ -1,6 +1,7 @@
 // Official Eleventy Plugins
 const pluginNavigation = require("@11ty/eleventy-navigation");
 //const pluginRSS = require("@11ty/eleventy-plugin-rss");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 // markdown-it plugins
 const markdownIt = require('markdown-it');
@@ -126,7 +127,7 @@ module.exports = function(config) {
 
 	// -------------------------------------------------------------------- //
 	// Plugins
-
+	config.addPlugin(EleventyHtmlBasePlugin);
 	config.addPlugin(pluginNavigation);
 	//config.addPlugin(pluginRSS);
 
@@ -145,7 +146,8 @@ module.exports = function(config) {
 			input: "src",
 			data: "_includes/_data",
 			output: "build"
-		}
+		},
+		pathPrefix: "/sabby/"
 	}
 
 }
