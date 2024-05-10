@@ -26,8 +26,10 @@
 					{% for day in currentMonthDays -%}
 						<td class="day-active">{{- day -}}
 						{%- for event in collections.upcoming -%}
-							{%- if getDate(event.data.date) == day -%}
-								<a class="calendar-link" href="{{ event.url }}">{{event.data.title}}</a>
+							{%- if getMonth(event.data.date) == currentMonth -%}
+								{%- if getDate(event.data.date) == day -%}
+									<a class="calendar-link" href="{{ event.url }}">{{event.data.title}}</a>
+								{%- endif -%}
 							{%- endif -%}
 						{%- endfor -%}
 						</td>
