@@ -2,7 +2,7 @@ name: Eleventy Build
 on: [push]
 permissions:
   contents: write
-
+  
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
@@ -16,5 +16,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: build
-          publish_branch: gh-pages
+          publish_branch: live
           github_token: ${{ secrets.GITHUB_TOKEN }}
