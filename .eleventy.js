@@ -146,8 +146,7 @@ module.exports = function(config) {
 			input: "src",
 			data: "_includes/_data",
 			output: "build"
-		},
-		pathPrefix: "/sabby/"
+		}
 	}
 
 }
