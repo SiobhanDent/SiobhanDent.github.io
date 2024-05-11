@@ -3,21 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="/sabby/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 	<title>PS2 Book Club / Sabby!</title>
 
 	<!-- Meta -->
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="/sabby/css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="/sabby/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	
 	<!-- FontAwesome -->
 	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
 
 	<!-- Scripts -->
-	<script src="/sabby/js/script.js" defer=""></script>
+	<script src="/js/script.js" defer></script>
 	
 
 	
@@ -36,15 +36,15 @@
 	</script>
 
 	<header>
-		<a href="/sabby/" title="Home" id="masthead">
-			<img id="logo" src="/sabby/img/logo.png">
+		<a href="/" title="Home" id="masthead">
+			<img id="logo" src="/img/logo.png">
 			<!--<div id="subtitle">Gallery ✧ Events ✧ Coworking ✧ Rentals</div>-->
 		</a>
 		<nav>
 			<ul>
-				<li><button onclick="document.location='/sabby/events/'">What's On</button></li>
-				<li><button onclick="document.location='/sabby/about/'">About</button></li>
-				<li><button onclick="document.location='/sabby/contact/'">Contact</button></li>
+				<li><button onclick="document.location='/events/'">What's On</button></li>
+				<li><button onclick="document.location='/about/'">About</button></li>
+				<li><button onclick="document.location='/contact/'">Contact</button></li>
 				<li><button id="lightToggle"><i id="lighticon" class="fa-solid fa-sun"></i></button></li>
 			</ul>
 		</nav>
@@ -53,13 +53,13 @@
 	<main>
 			
 	
-<section id="event" class="flex-col">	
+<section id="event" class="flex-col" >	
 	<div class="title">
 		<h1>PS2 Book Club</h1>
 		<date>12 Mar 2024</date>
 	</div>
 
-	<img class="poster flex-child" src="/sabby/img/posters/PS2BookClub-March2024.jpg">
+	<img class="poster flex-child" src="/img/posters/PS2BookClub-March2024.jpg"></img>
 
 	<article id="description" class="flex-child">
 	<h2>Meet up, talk about PS2 games, then play those games.</h2>
@@ -91,7 +91,7 @@
 
 <section class="frame" style="--frameBg: var(--grey)">
 	<h1>
-		<a href="/sabby/events/">See more events.</a>
+		<a href="/events/">See more events.</a>
 	</h1>
 </section>
 
@@ -99,7 +99,7 @@
 	</main>
 
 	<footer>
-		<span>Sabby! &copy; <span id="currentYear">2024</span> / <a href="/sabby/safe-spaces">Safe Space Policy</a> </span>
+		<span>Sabby! &copy; <span id="currentYear">2024</span> / <a href="/safe-spaces">Safe Space Policy</a> </span>
 		<script>
 			document.getElementById("currentYear").innerText = new Date().getFullYear();
 		</script>
