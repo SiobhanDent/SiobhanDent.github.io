@@ -363,6 +363,10 @@ section.frame {
 	transform: translate(-8px,8px);
 }
 
+#socials svg {
+	max-height: 24px;
+}
+
 
 
 @media screen and (max-width: 800px) {
