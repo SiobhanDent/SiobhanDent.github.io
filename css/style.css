@@ -312,11 +312,11 @@ section.frame {
 }
 
 
-#socials {
+#links {
 	align-items: center;
 }
 
-#socials ul {
+#links ul {
 	display: flex;
 	padding: 0;
 
@@ -326,14 +326,14 @@ section.frame {
 
 }
 
-#socials li {
+#links li {
 	padding: 4px;
 	aspect-ratio: 1 / 1;
 	width: 72px;
 	height: 72px;
 }
 
-#socials a {
+#links a {
 	color: var(--light);
 	background-color: var(--blue);
 
@@ -353,17 +353,17 @@ section.frame {
 	text-align: center;
 }
 
-#socials a:hover {
+#links a:hover {
 	background-color: var(--yellow);
 	transition: background-color 0.5s ease;
 }
 
-#socials a:active {
+#links a:active {
 	box-shadow: none;
 	transform: translate(-8px,8px);
 }
 
-#socials svg {
+#links svg {
 	max-height: 24px;
 }
 
@@ -392,6 +392,6 @@ section.frame {
 		width: 100%;
 	}
 
-	#socials {
+	#links {
 		align-items: flex-start;
 	}
