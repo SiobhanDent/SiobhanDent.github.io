@@ -27,3 +27,7 @@ buttonLight.addEventListener('click', () => {
 	localStorage.setItem('theme', theme);
 	setTheme(theme);
 });
+
+
+//TWEMOJI
+// twemoji.parse(document.body)

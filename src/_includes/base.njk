@@ -16,6 +16,9 @@
 	<!-- FontAwesome -->
 	<script src="https://kit.fontawesome.com/87224a5bfc.js" crossorigin="anonymous"></script>
 
+	<!-- Twemoji -->
+	{# <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous" defer></script> #}
+
 	<!-- Scripts -->
 	<script src="/js/script.js" defer></script>
 	{% block scripts %}
@@ -37,7 +40,7 @@
 
 	<header>
 		<a href="/" title="Home" id="masthead">
-			<img id="logo" src="/img/logo.png">
+			<img id="logo" src="/img/logo.png" alt="Sabby's logo">
 			<!--<div id="subtitle">{{ site.subtitle }}</div>-->
 		</a>
 		<nav>
@@ -45,7 +48,7 @@
 				<li><button onclick="document.location='{{ "/events/" | url }}'">What's On</button></li>
 				<li><button onclick="document.location='{{ "/about/" | url }}'">About</button></li>
 				<li><button onclick="document.location='{{ "/contact/" | url}}'">Contact</button></li>
-				<li><button id="lightToggle"><i id="lighticon" class="fa-solid fa-sun"></i></button></li>
+				<li><button id="lightToggle" title="Toggle Light/Dark Mode"><i id="lighticon" class="fa-solid fa-sun"></i></button></li>
 			</ul>
 		</nav>
 	</header>
@@ -61,7 +64,7 @@
 		<script>
 			document.getElementById("currentYear").innerText = new Date().getFullYear();
 		</script>
-		<span>website by cecile and andy</span>
+		<span>website by <a href="https://cecilerichard.design/">cecile</a> and <a href="https://gleeson.dev/">andy</a></span>
 		<a href="#"><span id="toTop">Back to Top ↑</span></a>
 	</footer>
 </body>
