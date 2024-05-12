@@ -60,7 +60,8 @@ header {
 #masthead:hover { background-color: var(--pink); border-radius: 40px; }
 
 #logo {
-	max-height: 100%;
+	height: 100%;
+	width: 100%;
 	transition: transform 0.5s ease;
 }
 
@@ -185,10 +186,7 @@ p, ul, ol, blockquote {
 	max-width: 50ch;	
 }
 
-ul > p, ol > p {
-	margin-left: -40px;
-	margin-bottom: 4px;
-}
+
 
 ul {
 	list-style-type: "— " ;
@@ -367,6 +365,11 @@ section.frame {
 	max-height: 24px;
 }
 
+
+p img.emoji, span img.emoji {
+	max-height: 24px;
+	transform: translateY(4px);
+}
 
 
 @media screen and (max-width: 800px) {
