@@ -1,0 +1,103 @@
+<link rel="stylesheet" type="text/css" href="/css/form.css">
+
+<section class="form" id="booking-form">
+	<h1>Book an Event at Sabby</h1>
+	<p>Description</p>
+	<form action="https://docs.google.com/forms/u/7/d/e/1FAIpQLSf0K7udvjbDBgJe2eEluMvTgd4mKnaoEHAYp__uviHR-TpnYQ/formResponse">
+		<div id="general-info" class="formSection">
+			<h2>General Information</h2>
+			 	<!-- email -->
+				<label for="email" class="required">What's your email address?</label>
+				<input type="email" name="emailAddress" id="email" placeholder="(e.g.) youremail@address.com" required>
+				<!-- event name -->
+				<label for="event-name" class="required">What's the name of your event?</label>
+				<input type="text" name="entry.561375931" id="event-name" placeholder="(e.g.) Teledog's Birthday Festival" required>
+				<!-- event description -->
+				<label for="event-description" class="required">Describe your event. What would you like to do at Sabby?</label>
+				<textarea type="text" name="entry.756180419" id="event-description" placeholder="(e.g.) This is a one-night exhibition showcasing a selection of games and a series of 5-minute talks to celebrate my friend Teledog's birthday." required></textarea>
+				<!-- organiser name(s) -->
+				<label for="organiser" class="required">Please provide the name of the organiser(s).</label>
+				<input type="text" name="entry.525419608" id="organiser" placeholder="(e.g.) John Egbert" required>
+				<!-- discord usernames -->
+				<label for="discord-username">Please provide your Discord username(s) if applicable.</label>
+				<input type="text" name="entry.62444338" id="discord-username" placeholder="(e.g.) @ectoBiologist">
+        </div>
+        <div id="dates" class="formSection">
+        	<h2>When would you like your event to happen?</h2>
+        		<!-- preferred date(s) -->
+				<label for="date" class="required">Tell us your preferred date(s).</label>
+				<input type="text" name="entry.1104298516" id="date" placeholder="(e.g.) 13/04/2025 or 20 April 2025" required>
+				<!-- preferred time(s) -->
+				<label for="time" class="required">Tell us your preferred beginning and end time(s).</label>
+				<input type="text" name="entry.143119969" id="time" placeholder="(e.g.) 5PM to 7PM" required>
+        </div>
+        <div id="more-info" class="formSection">
+        	<h2>Further details about your event</h2>
+        		<!-- public or private entry.1539965921 -->
+        		<fieldset>
+        			<legend class="required">Is this a public or private event?</legend>
+        			<input type="radio" id="public" name="entry.1539965921" value="Public (Open to everyone, promoted on Sabby's social media accounts)" required>
+    				<label for="public">Public (Open to everyone, promoted on Sabby's social media accounts)</label>
+    				<input type="radio" id="private" name="entry.1539965921" value="Private" required>
+    				<label for="private">Private</label>
+        		</fieldset>
+				<!-- if public, poster? entry.2324215 -->
+				<fieldset class="subfield">
+				    <legend><i>Public events only: </i>Would you like us to make a poster for your event, or will you provide one? <u>Leave the box unchecked if you'll be providing your own poster</u>, which should be sent to us at least a month before the event.</legend>
+				    <input type="checkbox" id="poster-request" name="entry.2324215" value="Please make me a poster!" />
+				    <label for="poster-request">Please make me a poster!</label>
+				  </fieldset>
+				<!-- repeating event? entry.800697463 -->
+				<fieldset>
+        			<legend class="required">Will this be a repeating event? </legend>
+        			<input type="radio" id="repeat" name="entry.800697463" value="Yes, it does repeat!" required>
+    				<label for="repeat">Yes, it does repeat!</label>
+    				<input type="radio" id="one-off" name="entry.800697463" value="No, this is a one-off event." required>
+    				<label for="one-off">No, this is a one-off event.</label>
+        		</fieldset>
+				<!-- if repeating, frequency? entry.1102994289 -->
+				<div class="subfield">
+					<label for="frequency">If your event is a repeating event, how often would you like it to happen? (i.e. monthly, every 3 months, once in a blue moon)</label>
+					<input type="text" name="entry.1102994289" id="frequency" placeholder="(e.g.) Every 3 months">
+				</div>
+				<!-- setup and packdown entry.539186257 -->
+				<fieldset>
+				    <legend class="required">Will you need time on previous and following days for set-up / packdown? Select all options that apply.</legend>
+				    <input type="checkbox" id="setup" name="entry.539186257" value="Set-up" required>
+				    <label for="setup">Set-up</label>
+				    <input type="checkbox" id="packdown" name="entry.539186257" value="Packdown" required>
+				    <label for="packdown">Packdown</label>
+				  </fieldset>
+				<!-- rooms to book entry.1645542504 -->
+				<fieldset>
+				    <legend class="required">Which spaces would you like to use for the event? Select desired rooms.</legend>
+				    <input type="checkbox" id="main-room" name="entry.1645542504" value="Main Gallery (Capacity: 30 people)" required>
+				    <label for="main-room">Main Gallery (Capacity: 30 people)</label>
+				    <input type="checkbox" id="kitchen" name="entry.1645542504" value="Kitchen (Capacity: 5 people)" required>
+				    <label for="kitchen">Kitchen (Capacity: 5 people)</label>
+				    <input type="checkbox" id="backyard" name="entry.1645542504" value="Backyard (Capacity: 20 people, if weather allows)" required>
+				    <label for="backyard">Backyard (Capacity: 20 people, if weather allows)</label>
+				    <input type="checkbox" id="upstairs-landing" name="entry.1645542504" value="Upstairs Landing (Capacity: 6 people)" required>
+				    <label for="upstairs-landing">Upstairs Landing (Capacity: 6 people)</label>
+				    <input type="checkbox" id="media-room" name="entry.1645542504" value="Upstairs Lounge/Media Room (Capacity: 4 people)" required>
+				    <label for="media-room">Upstairs Lounge/Media Room (Capacity: 4 people)</label>
+				  </fieldset>
+				<!-- photos? entry.1107285303 -->
+				<fieldset>
+        			<legend class="required">Can we take photos and other recordings of the event for Sabby promotional purposes?</legend>
+        			<input type="radio" id="yes-photos" name="entry.1107285303" value="Yes, feel free to take photos!" required>
+    				<label for="yes-photos">Yes, feel free to take photos!</label>
+    				<input type="radio" id="no-photos" name="entry.1107285303" value="No thank you, I'd rather keep this event more private." required>
+    				<label for="no-photos">No thank you, I'd rather keep this event more private.</label>
+        		</fieldset>
+				<!-- material hire -->
+				<label for="material-hire">Let us know if there is any specific material you'd like to borrow from Sabby for your event. (We can also discuss this later! No worries!)</label>
+				<textarea type="text" name="entry.536177761" id="material-hire" placeholder="(e.g.) I'd like to borrow a couple of monitors and a projector please!"></textarea>
+				<!-- additional info -->
+				<label for="additional-info">Is there any additional information you want to add or ask?</label>
+				<textarea type="text" name="entry.156114625" id="additional-info" placeholder="(e.g.) What's your spaghetti policy?"></textarea>
+
+        </div>
+        <input id="submitButton" type="submit" value="Submit Form">
+	</form>
+</section>
