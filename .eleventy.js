@@ -46,6 +46,40 @@ module.exports = function(config) {
 		});
 	});
 
+	var dateThisMonth = new Date();
+	dateThisMonth.setDate(0);
+
+	var dateNextMonth = new Date();
+	dateNextMonth.setMonth(dateNextMonth.getMonth() + 1);
+	dateNextMonth.setDate(1);
+
+	config.addCollection('thisMonth', (collection) => {
+		const currentMonth = current.getMonth();
+		return collection.getFilteredByTag('events').filter((item) => {
+			if (!item.data.date) return false;
+
+			const itemMonth = item.data.date.getMonth();
+
+			if (itemMonth != currentMonth) return false;
+
+			return item.data.date > dateThisMonth && item.data.date < dateNextMonth;
+		});
+	});
+
+	config.addCollection('nextMonth', (collection) => {
+		const nextMonth = dateNextMonth.getMonth();
+		return collection.getFilteredByTag('events').filter((item) => {
+			if (!item.data.date) return false;
+
+			const itemMonth = item.data.date.getMonth();
+
+			if (itemMonth != nextMonth) return false;
+
+			return item.data.date > dateNextMonth;
+		});
+	});
+
+
 	config.addCollection("past", (collection) => {
 		return collection.getFilteredByTag('events').filter((item) => {
 			return item.data.date < current;
@@ -84,46 +118,54 @@ module.exports = function(config) {
 	});
 
 	// Filter: Markdown
-	config.addFilter('md', (content) => {
-		return md.render(content);
-	});
-
+	config.addFilter('md', (content) => md.render(content));
 
 	// -------------------------------------------------------------------- //
 	// CALENDAR BUSINESS
 
-	// Filter: Get Date
-	config.addNunjucksGlobal("getDate", (dateObj) => {
-		return dateObj.getDate();
-	});
-
-	// Filter: Get Month
-	config.addNunjucksGlobal("getMonth", (dateObj) => {
-		return dateObj.getMonth();
-	});
+	config.addNunjucksGlobal("getDate", (dateObj) => dateObj.getDate());
+	config.addNunjucksGlobal("getMonth", (dateObj) => dateObj.getMonth());
 
 	// Nunjucks Globals
-  	let now = new Date();
-  	const daysInMonth = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
-  	const firstDay = new Date(now.setDate(1)).getDay();
-  	const lastDay = new Date(now.setDate(daysInMonth)).getDay();
-  	const prevLastDate = new Date(now.setDate(0)).getDate();
+	let now = new Date();
+	const currentYear = now.getFullYear();
+	const currentMonth = now.getMonth();
 
-	const currentMonthDays = [...Array(daysInMonth)].map((_, i) => i + 1);
-  	const prevMonthDays = [...Array(firstDay - 1)].map((_, i) => prevLastDate - i).reverse();
-  	const nextMonthDays = (lastDay < 7) ? [...Array(7 - lastDay)].map((_, i) => i + 1) : [];
-	
-	// Ints
-	config.addNunjucksGlobal("currentMonth", now.getMonth() + 1);
-	//config.addNunjucksGlobal("daysInMonth", daysInMonth);
-	//config.addNunjucksGlobal("firstDay", firstDay);
-	//config.addNunjucksGlobal("lastDay", lastDay);
-	//config.addNunjucksGlobal("prevLastDate", prevLastDate);
+	// Collect data for *this month* and *next month*
+	const prevMonthLastDate = new Date(currentYear, currentMonth, 0).getDate();
+	const currMonthLastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+	const nextMonthLastDate = new Date(currentYear, currentMonth + 2, 0).getDate();
 
-	// Arrays
-	config.addNunjucksGlobal("currentMonthDays", currentMonthDays);
-	config.addNunjucksGlobal("prevMonthDays", prevMonthDays);
-	config.addNunjucksGlobal("nextMonthDays", nextMonthDays);
+	const currFirstWeekday = new Date(currentYear, currentMonth, 1).getDay();
+	const currLastWeekday  = new Date(currentYear, currentMonth + 1, 0).getDay();
+	const nextFirstWeekday = new Date(currentYear, currentMonth + 1, 1).getDay();
+	const nextLastWeekday  = new Date(currentYear, currentMonth + 2, 0).getDay();
+
+	const currMonthDays = [...Array(currMonthLastDate)].map((_, i) => i + 1);
+	const nextMonthDays = [...Array(nextMonthLastDate)].map((_, i) => i + 1);
+
+	const prevMonthPeek = [...Array(currFirstWeekday - 1)].map((_, i) => prevMonthLastDate - i).reverse();
+	const currMonthPeek = [...Array(nextFirstWeekday - 1)].map((_, i) => currMonthLastDate - i).reverse();
+	const nextMonthPeek = (currLastWeekday > 0) ? [...Array(7 - currLastWeekday)].map((_, i) => i + 1) : [];
+	const afterMonthPeek = (nextLastWeekday > 0) ? [...Array(7 - nextLastWeekday)].map((_, i) => i + 1) : [];
+
+	const nextMonth = new Date(currentYear, currentMonth + 1, 1).getMonth();
+
+	const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+	const currMonthName = `${monthNames[currentMonth]} ${dateThisMonth.getYear() + 1900}`;
+	const nextMonthName = `${monthNames[nextMonth]} ${dateNextMonth.getYear() + 1900}`;
+
+	config.addNunjucksGlobal('currMonthName', currMonthName);
+	config.addNunjucksGlobal('nextMonthName', nextMonthName);
+	config.addNunjucksGlobal('currMonth',      currentMonth);
+	config.addNunjucksGlobal('nextMonth',      nextMonth);
+	config.addNunjucksGlobal('currMonthDays',  currMonthDays);
+	config.addNunjucksGlobal('nextMonthDays',  nextMonthDays);
+	config.addNunjucksGlobal('prevMonthPeek',  prevMonthPeek);
+	config.addNunjucksGlobal('currMonthPeek',  currMonthPeek);
+  	config.addNunjucksGlobal('nextMonthPeek',  nextMonthPeek);
+  	config.addNunjucksGlobal('afterMonthPeek', afterMonthPeek);
 
 	// -------------------------------------------------------------------- //
 	// Plugins
