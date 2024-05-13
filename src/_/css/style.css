@@ -55,13 +55,13 @@ header {
 	max-width: 100%;
 }
 
-#masthead { max-width: 300px; max-height: 96px; font-size: 0.8em }
+#masthead { max-width: 320px; max-height: 96px; font-size: 0.8em }
 
 #masthead:hover { background-color: var(--pink); border-radius: 40px; }
 
 #logo {
-	height: 100%;
-	width: auto;
+	height: auto;
+	width: 100%;
 	transition: transform 0.5s ease;
 }
 
