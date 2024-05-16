@@ -4,7 +4,8 @@
 
 	--yellow: #f9c836;
 	--pink: #e63b7a;
-	--blue: #4572dc;
+	--blue: #596be1;
+	--navy: #181369;
 	--grey: #f9e6c3;
 
 	--bgCol: var(--light);
@@ -14,6 +15,8 @@
     --frameText: var(--dark);
 
 	--highlight: var(--yellow);
+
+	font-size: 24px;
 }
 
 :root[data-theme='dark'] {
@@ -45,7 +48,6 @@ body {
 	padding: 1em;
 
 	font-family: "Argent Pixel CF", serif;
-	font-size: 24px;
 }
 
 header {
@@ -117,11 +119,40 @@ nav button:active {
 }
 
 footer {
+	margin-top: 2em;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	font-size: 0.8em;
+	margin-inline: -1rem;
+}
+
+footer section {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
+	align-items: center;
+	padding-inline: 16px;
+	padding-block: 8px;
+}
+
+footer p {
 	font-size: 0.8em;
-	padding-block: 0.5em;
+	margin-block: 0;
+}
+
+footer a {
+	text-decoration-thickness: 1px;
+}
+
+#footer-info {
+	background-color: var(--bgCol);
+	padding-block: 16px;
+}
+
+#footer-credits {
+	margin-bottom:-1em;
+	background-color: var(--grey);
 }
 
 main {
@@ -373,7 +404,11 @@ p img.emoji, span img.emoji {
 
 
 @media screen and (max-width: 800px) {
-	body { font-size: 1em; }
+	body { font-size: 0.9em; }
+
+	nav {
+
+	}
 
 	#blurb {
 		aspect-ratio: 5 / 4;
@@ -398,3 +433,20 @@ p img.emoji, span img.emoji {
 	#links {
 		align-items: flex-start;
 	}
+
+	footer section {
+		flex-flow: row wrap;
+		align-items: flex-start;
+	}
+
+	footer #footer-info p {
+		width: 100%;
+		margin-block: 0.4em;
+	}
+
+	footer #acknowledgement {
+		flex-basis: 100% !important;
+	}
+
+
+}
