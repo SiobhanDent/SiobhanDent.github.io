@@ -2,7 +2,7 @@
 title: Stretches for the Stationary
 date: 2024-03-05
 tags: [stretches]
-poster: "Stretches-March2024.png"
+poster: "Stretches-March2024.jpg"
 blurb: "A free workshop to help the deskbound."
 ---
 

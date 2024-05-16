@@ -2,7 +2,7 @@
 title: "Sabby Movie Night: Tampopo (1985) and ramen"
 date: 2024-01-16
 tags: [movie-night]
-poster: "MovieNight-Jan2024.png"
+poster: "MovieNight-Jan2024.jpg"
 blurb: "A screening of Tampopo with a serving of Ramen."
 ---
 

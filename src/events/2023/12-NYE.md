@@ -2,7 +2,7 @@
 title: Sabby NYE
 date: 2023-12-31
 tags: [nye]
-poster: "NYE-Dec2023.png"
+poster: "NYE-Dec2023.jpg"
 blurb: "A screening of Tampopo with a serving of Ramen."
 ---
 

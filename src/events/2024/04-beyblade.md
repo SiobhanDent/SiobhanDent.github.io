@@ -2,7 +2,7 @@
 title: Fake Beyblade Tournament
 date: 2024-04-16
 tags: [beyblade]
-poster: "Beyblade-April2024.png"
+poster: "Beyblade-April2024.jpg"
 blurb: "The Re-Revenge"
 ---
 
