@@ -57,7 +57,12 @@ header {
 	max-width: 100%;
 }
 
-#masthead { max-width: 320px; max-height: 96px; font-size: 0.8em }
+#masthead {
+	max-width: 320px;
+	max-height: 96px;
+	font-size: 0.8em;
+	aspect-ratio: 3.33 / 1;
+}
 
 #masthead:hover { background-color: var(--pink); border-radius: 40px; }
 
@@ -143,11 +148,13 @@ footer section {
 
 footer p {
 	font-size: 0.8em;
+	line-height: 1.4em;
 	margin-block: 0;
 }
 
 footer a {
 	text-decoration-thickness: 1px;
+	padding: 2px;
 }
 
 #footer-info {
@@ -167,11 +174,16 @@ main {
 }
 
 main section {
+	margin: auto;
 	max-width: 80ch;
 	font-size: 1em;
 
 	margin-inline: auto;
 	margin-block: 2em;
+}
+
+main section:nth-child(1) {
+	margin-block-start: 0;
 }
 
 hr {
@@ -209,7 +221,6 @@ main > hr { margin-inline: 1em }
 	max-width: 30ch;
 	color: var(--textCol);
 	text-shadow: -6px 6px var(--bgCol);
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -221,8 +232,6 @@ h1, h2, h3, h4, h5, h6 {
 p, ul, ol, blockquote {
 	max-width: 50ch;	
 }
-
-
 
 ul {
 	list-style-type: "— " ;
@@ -238,10 +247,13 @@ a {
 	text-decoration: underline 2px;
 }
 
+.nw {
+	white-space: nowrap;
+}
+
 a:hover {
 	background-color: var(--yellow);
 }
-
 
 section.frame {
 	padding: 1em;
@@ -264,6 +276,9 @@ section.frame {
 	padding-inline: 8px;
 }
 
+.flex-child > ul {
+	margin-left: 0;
+}
 
 .poster-thumb {
 	width: 100%;
@@ -273,18 +288,18 @@ section.frame {
 	display: flex;
 	flex-flow: row wrap;
 	list-style: none;
-
-	max-width: 100%;
-	padding-left: 0;
+	padding: 0;
+	margin: 0 auto;
+	min-width: 100%;
 }
 
 .event-list li {
-	flex-basis: calc(33% - 16px);
+	flex-basis: calc(33.333% - 8px);
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
 
-	margin-inline: 8px;
+	margin-inline: 4px;
 	margin-block: 0.7em;
 }
 
@@ -321,7 +336,6 @@ section.frame {
 	background-color: var(--grey);
 }
 
-
 #event .title {
 	border-bottom: 4px dotted var(--pink);
 	padding-bottom: 0.7em;
@@ -337,6 +351,8 @@ section.frame {
 	width: 100%;
 	text-align: right;
 	background-color: var(--grey);
+	border-radius: 4px;
+	padding: 8px;
 }
 
 #event .poster {
@@ -344,7 +360,6 @@ section.frame {
 	height: 100%;
 	margin-top: 1em;
 }
-
 
 #links {
 	align-items: center;
@@ -401,15 +416,43 @@ section.frame {
 	max-height: 24px;
 }
 
-
 p img.emoji, span img.emoji {
 	max-height: 24px;
 	transform: translateY(4px);
 }
 
+.button {
+	margin: 2em auto;
+	display: block;
+	text-align: center;
+	border: 4px solid var(--dark);
+	box-shadow: -8px 8px var(--dark);
+	background-color: var(--pink);
+
+	border-radius: 1em;
+	padding: 0.5em;
+	margin-inline: 1em;
+
+	max-width: 40ch;
+	width: auto;
+
+	font-family: "Speeches And Cream", sans-serif;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-style: italic;
+	text-transform: uppercase;
+}
 
 @media screen and (max-width: 800px) {
-/*	body { font-size: 0.9em; }*/
+
+	body {
+		overflow-x: hidden;
+	}
+
+	#masthead {
+		margin: 0 auto;
+	}
 
 	nav ul { margin-block: 1em; flex-flow: row wrap; }
 
@@ -433,6 +476,24 @@ p img.emoji, span img.emoji {
 		width: 100%;
 	}
 
+	.flex-child > ul {
+		padding-inline-start: 1em;
+	}
+
+	#address {
+		font-size: 0.9em;
+	}
+
+	.event-list li {
+		flex-basis: calc(50% - 8px);
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+
+		margin-inline: 4px;
+		margin-block: 0.7em;
+	}
+
 	#links {
 		align-items: flex-start;
 	}
@@ -454,6 +515,5 @@ p img.emoji, span img.emoji {
 	footer #acknowledgement {
 		flex-basis: 100% !important;
 	}
-
 
 }

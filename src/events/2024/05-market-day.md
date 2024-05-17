@@ -14,5 +14,6 @@ Saturday May 25th, from 10 a.m. to 3 p.m.
 
 *Expression of Interest*
 
-If you're interested in holding a stall free of charge, just fill in the form at:
-https://forms.gle/TVdU5VNMboTfXayx7
+If you're interested in holding a stall free of charge, just fill in the form:
+
+[Submission Form](https://forms.gle/TVdU5VNMboTfXayx7){.button}
