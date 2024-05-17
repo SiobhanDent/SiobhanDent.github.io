@@ -7,14 +7,14 @@
 	"address": "141 Victoria Parade, Collingwood (not Fitzroy)",
 	"people": [
 		{
-			"name": "Siobhan Dent",
-			"link": "https://x.com/famousGastropod",
-			"role": "Maid of Lore"
-		},
-		{
 			"name": "Null",
 			"link": "https://sabbatical.gallery",
 			"role": "Mayor of Upkeep"
+		},
+		{
+			"name": "Siobhan Dent",
+			"link": "https://x.com/famousGastropod",
+			"role": "Maid of Lore"
 		},
 		{
 			"name": "Lem",
