@@ -16,7 +16,7 @@
 
 	--highlight: var(--yellow);
 
-	font-size: 24px;
+	font-size: clamp(1.2rem, 2vw, 24px); 
 }
 
 :root[data-theme='dark'] {
@@ -69,6 +69,11 @@ header {
 
 #logo:hover {
 	transform: rotate(-5deg);
+}
+
+nav {
+	display: flex;
+	align-items: center;
 }
 
 nav ul {
@@ -199,7 +204,7 @@ main > hr { margin-inline: 1em }
 	top: 50%;
   	left: 0;
   	transform: translateY(-100%);
-	font-size: 2em;
+	font-size: clamp(1.5em, 3.5vw, 2em);
 	font-style: italic;
 	max-width: 30ch;
 	color: var(--textCol);
@@ -404,11 +409,9 @@ p img.emoji, span img.emoji {
 
 
 @media screen and (max-width: 800px) {
-	body { font-size: 0.9em; }
+/*	body { font-size: 0.9em; }*/
 
-	nav {
-
-	}
+	nav ul { margin-block: 1em; flex-flow: row wrap; }
 
 	#blurb {
 		aspect-ratio: 5 / 4;
@@ -432,6 +435,10 @@ p img.emoji, span img.emoji {
 
 	#links {
 		align-items: flex-start;
+	}
+
+	footer {
+		font-size: 0.9em;
 	}
 
 	footer section {
