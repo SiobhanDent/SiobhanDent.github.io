@@ -7,49 +7,39 @@
 	"address": "141 Victoria Parade, Collingwood (not Fitzroy)",
 	"people": [
 		{
+			"name": "Null",
+			"link": "https://sabbatical.gallery",
+			"role": "Mayor of Upkeep"
+		},
+		{
 			"name": "Siobhan Dent",
 			"link": "https://sabbatical.gallery",
 			"role": "Maestro of Lore"
 		},
 		{
-			"name": "Null Congedo",
+			"name": "Lem",
 			"link": "https://sabbatical.gallery",
-			"role": "Mayor of Upkeep"
-		},
-		{
-			"name": "Zola",
-			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
-		},
-		{
-			"name": "Max K",
-			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
-		},
-		{
-			"name": "Tegan Webb",
-			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
+			"role": "Minister for Plants and Smol Beings"
 		},
 		{
 			"name": "Cecile Richard",
 			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
+			"role": "'Man' of 'Honour'"
 		},
 		{
 			"name": "Andy Gleeson",
 			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
+			"role": "Game Mechanic"
 		},
 		{
-			"name": "David Ma",
+			"name": "Max K",
 			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
+			"role": "Maestro of Progress"
 		},
 		{
-			"name": "Grace Tang",
-			"link": "https://sabbatical.gallery",
-			"role": "Mysterious role here"
+			"name": "Tegan Webb",
+			"link": "https://teganewebb.neocities.org/",
+			"role": "Zine Mailer"
 		}
 	],
 	"link": {
