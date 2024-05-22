@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-	<title>Welcome / Siobhan!</title>
+	<title>title / Siobhan!</title>
 
 	<!-- Meta -->
 	<meta name="description" content="Game Developer and Community Organiser">
@@ -70,44 +70,83 @@
 
 	<main>
 			
-			
-<section id="blurb">
-	<h1>Hey, I'm Siobhan!</h1>
-	<img src="/img/home.jpg" alt="A filtered photo of Sabby during an event.">
+	
+<section id="project" class="flex-col" >	
+	<div class="title">
+		<h1>title</h1>
+
+		2024 |
+
+		
+		
+	</div>
+
+	<!-- TODO: CONVERT WEBP TO JPG -->
+	<img class="poster flex-child" src="/img/projects/title/thumbnail.webp"></img>
+
+	<article id="description" class="flex-child">
+	<h2>blurb</h2>
+	<p>Content</p>
+
+	</article>
 </section>
 
-<section id="intro">
-	<p>
-		I'm a multidisciplinary videogame artist and community organiser living in Naarm (Melbourne).
-	</p>
-	<p> Here are a couple of the things that I've been up to: </p>
-	<ul>
-		<li> I co-manage the playful co-working and gallery space <a href="https://sabby.gallery/">Sabby.</a></li>
-		<li> I teach a free yearly Game-a-Week workshop. </li>
-		<li> I share <a href="https://siobhan-dent.itch.io/">weird and wonderful games</a> with the world! </li>
-	</ul>
+<section class="flex-col" id="screenshot-gallery">
+
+<script>
+
+	var bCheckEnabled = true;
+	var bFinishCheck = false;
+
+	var img;
+	var i = 1;
+
+	var myInterval = setInterval(loadImage, 1);
+
+	function loadImage() {
+
+		if (bFinishCheck) {
+			clearInterval(myInterval);
+			console.log('Loaded ' + i + ' image(s)!)');
+			return;
+		}
+
+		if (bCheckEnabled) {
+
+			bCheckEnabled = false;
+
+			img = new Image();
+			img.onload = fExists;
+			img.onerror = fDoesntExist;
+			img.src = "/img/projects/title/screenshot" + i + '.jpg';
+		}
+
+	}
+
+	function fExists() {
+		i++;
+		bCheckEnabled = true;
+		document.getElementById("screenshot-gallery").appendChild(img);
+	}
+
+	function fDoesntExist() {
+		bFinishCheck = true;
+		img = null;
+	}
+
+</script>
+
 </section>
 
 <hr>
 
-<section id="links" class="frame flex-col">
-	<h3 style="margin: 4px;">Contact</h3>
-	<ul class="flex-child">
-		<li><a href="https://siobhan-dent.itch.io/" target="_blank" aria-label="Link to my itch.io"><i class="fa-brands fa-itch-io"></i></a></li>
-		<li><a href="https://x.com/famousGastropod" target="_blank" aria-label="Link to my Twitter"><i class="fa-brands fa-twitter"></i></a></li>
-		<li><a href="https://www.linkedin.com/in/siobhan-dent-886084193/" target="_blank" aria-label="Link to my Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-		<li><a href="mailto:siobhan.slime@gmail.com" target="_blank" aria-label="Link to email me"><i class="fa-solid fa-envelope"></i></a></li>
-	</ul>
-	<div class="flex-child">
-		<p>You're welcome to reach out! :)</p>
-	</div>
-</section>
-
-	
+<section class="frame" style="--frameBg: var(--wine)">
+	<h1>
+		<a href="/projects/">See more projects.</a>
+	</h1>
 </section>
 
 
-			
 			<hr>
 	</main>
 
