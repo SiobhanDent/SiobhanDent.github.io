@@ -1,20 +1,29 @@
 :root {
+	/*
 	--dark: #17050e;
 	--light: #fff2da;
+	*/
+
+	--dark: #8987B8;
+	--light: #ebffee;
 
 	--yellow: #f9c836;
-	--pink: #e63b7a;
+	--pink: #5ac463;
 	--blue: #596be1;
 	--navy: #181369;
 	--grey: #f9e6c3;
 
+	--lightgreen: #d6e9a1;
+	--wine: #5f5d96;
+	--orange: #b86b0c;
+
 	--bgCol: var(--light);
 	--textCol: var(--dark);
 
-	--frameBg: var(--pink);
-    --frameText: var(--dark);
+	--frameBg: var(--lightgreen);
+    --frameText: var(--wine);
 
-	--highlight: var(--yellow);
+	--highlight: var(--orange);
 
 	font-size: clamp(1.2rem, 2vw, 24px); 
 }
@@ -23,7 +32,7 @@
 	--bgCol: var(--dark);
 	--textCol: var(--light);
 
-	--highlight: var(--blue);
+	--highlight: var(--wine);
 
 	--grey: #2e0a1d;
 }
@@ -34,7 +43,7 @@
 
 body {
 	background-color: var(--bgCol);
-	background-image:  linear-gradient(var(--grey) 1px, transparent 1px), linear-gradient(to right, var(--grey) 1px, var(--bgCol) 1px);
+	/*background-image:  linear-gradient(var(--grey) 1px, transparent 1px), linear-gradient(to right, var(--grey) 1px, var(--bgCol) 1px);*/
 	background-size: 20px 20px;
 
 	color: var(--textCol);
@@ -47,7 +56,7 @@ body {
 	margin: 0;
 	padding: 1em;
 
-	font-family: "Argent Pixel CF", serif;
+	font-family: "Tommy Soft";
 }
 
 header {
@@ -58,13 +67,13 @@ header {
 }
 
 #masthead {
-	max-width: 320px;
-	max-height: 96px;
+	max-width: 400px;
+	max-height: 176px;
 	font-size: 0.8em;
 	aspect-ratio: 3.33 / 1;
 }
 
-#masthead:hover { background-color: var(--pink); border-radius: 40px; }
+#masthead:hover { background-color: var(--wine); border-radius: 40px; }
 
 #logo {
 	height: auto;
@@ -94,10 +103,10 @@ nav ul li {
 }
 
 nav button {
-	background-color: var(--yellow);
-	border: 4px solid var(--blue);
+	background-color: var(--lightgreen);
+	border: 4px solid var(--wine);
 	border-radius: 24px;
-	box-shadow: -8px 8px var(--blue);
+	box-shadow: -8px 8px var(--wine);
 
 	font-family: "Speeches And Cream", sans-serif;
 	font-size: 0.9em;
@@ -108,12 +117,12 @@ nav button {
 	padding: 12px;
 	height: 100%;
 
-	color: var(--pink);
+	color: var(--orange);
 }
 
 nav button:hover { 
-	background-color: var(--pink);
-	color: var(--dark);
+	background-color: var(--wine);
+	color: var(--lightgreen);
 	transition: color 0.5s ease;
 	transition: background-color 0.5s ease;
 }
@@ -164,7 +173,7 @@ footer a {
 
 #footer-credits {
 	margin-bottom:-1em;
-	background-color: var(--grey);
+	background-color: var(--wine);
 }
 
 main {
@@ -188,7 +197,7 @@ main section:nth-child(1) {
 
 hr {
 	border: 0;
-	border-top: 4px dotted var(--pink);
+	border-top: 4px dotted var(--lightgreen);
 }
 
 main > hr { margin-inline: 1em }
@@ -243,7 +252,7 @@ li {
 
 a {
 	display: inline-block;
-	color: var(--pink);
+	color: var(--lightgreen);
 	text-decoration: underline 2px;
 }
 
@@ -384,11 +393,11 @@ section.frame {
 
 #links a {
 	color: var(--light);
-	background-color: var(--blue);
+	background-color: var(--dark);
 
-	border: 4px solid var(--dark);
+	border: 4px solid var(--wine);
 	border-radius: 24px;
-	box-shadow: -8px 8px var(--dark);
+	box-shadow: -8px 8px var(--wine);
 
 	display: flex;
 	text-decoration: none;
@@ -403,7 +412,8 @@ section.frame {
 }
 
 #links a:hover {
-	background-color: var(--yellow);
+	background-color: var(--light);
+	color: var(--orange);
 	transition: background-color 0.5s ease;
 }
 
