@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-	<title>Welcome / Siobhan!</title>
+	<title>Speedboat Alchemy / Siobhan!</title>
 
 	<!-- Meta -->
 	<meta name="description" content="Game Developer and Community Organiser">
@@ -70,52 +70,88 @@
 
 	<main>
 			
-			
+	
+<section id="project" class="flex-col" >	
+	<div class="title">
+		<h1>Speedboat Alchemy</h1>
 
+		2021 |
 
-<section id="intro" class="frame">
-
-	<h1>Hey, I'm Siobhan!</h1>
-
-	<div class="flex-col">
-	<div id="bio">
-		<p>
-			I'm a game developer and community organiser living in Naarm (Melbourne).
-		</p>
-		<p> I worked on the Freeplay Award nominated Bell's Beach! You might have seen me at Parallels in 2021 and 2023.
+		
+			Programming, 
+		
+			Game Design
+		
+		
 	</div>
-	<div id="latest">
-	<h3> Curious what I've been up to? </h3>
-	<hr>
-	<ul>
-		<li> I co-manage the playful event/coworking space <a href="https://sabby.gallery/">Sabby.</a></li>
-		<li> I teach a free yearly Game-a-Week workshop. </li>
-		<li> I'm a recurring panelist with the <a href="https://trashenthusiasts.com/">Trash Enthusaists Society.</a> </li>
-		<li> I'm always <a href="https://siobhan-dent.itch.io/">working on new games</a> to share! </li>
-	</ul>
-	</div>
+
+	<!-- TODO: CONVERT WEBP TO JPG -->
+	<img class="poster flex-child" src="/img/projects/speedboat-alchemy/thumbnail.webp"></img>
+
+	<article id="description" class="flex-child">
+	<h2>Chaotic Genre-bending Shoot-em-Up</h2>
+	<p>Speedboat Alchemy is a hectic action game where your weapons are made in the middle of battle.</p>
+<p>Jumping between keyboard and mouse controls, the player has to throw ingredients into a cauldron to make new bullets, and their properties are all randomly generated.</p>
+
+	</article>
+</section>
+
+<section class="flex-col" id="screenshot-gallery">
+
+<script>
+
+	var bCheckEnabled = true;
+	var bFinishCheck = false;
+
+	var img;
+	var i = 1;
+
+	var myInterval = setInterval(loadImage, 1);
+
+	function loadImage() {
+
+		if (bFinishCheck) {
+			clearInterval(myInterval);
+			console.log('Loaded ' + i + ' image(s)!)');
+			return;
+		}
+
+		if (bCheckEnabled) {
+
+			bCheckEnabled = false;
+
+			img = new Image();
+			img.onload = fExists;
+			img.onerror = fDoesntExist;
+			img.src = "/img/projects/speedboat-alchemy/screenshot" + i + '.jpg';
+		}
+
+	}
+
+	function fExists() {
+		i++;
+		bCheckEnabled = true;
+		document.getElementById("screenshot-gallery").appendChild(img);
+	}
+
+	function fDoesntExist() {
+		bFinishCheck = true;
+		img = null;
+	}
+
+</script>
+
 </section>
 
 <hr>
 
-<section id="links" class="frame flex-col">
-	<h3 style="margin: 4px;">Contact</h3>
-	<ul class="flex-child">
-		<li><a href="https://siobhan-dent.itch.io/" target="_blank" aria-label="Link to my itch.io"><i class="fa-brands fa-itch-io"></i></a></li>
-		<li><a href="https://x.com/famousGastropod" target="_blank" aria-label="Link to my Twitter"><i class="fa-brands fa-twitter"></i></a></li>
-		<li><a href="https://www.linkedin.com/in/siobhan-dent-886084193/" target="_blank" aria-label="Link to my Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-		<li><a href="mailto:siobhan.slime@gmail.com" target="_blank" aria-label="Link to email me"><i class="fa-solid fa-envelope"></i></a></li>
-	</ul>
-	<div class="flex-child">
-		<p>You're welcome to reach out! :)</p>
-	</div>
-</section>
-
-	
+<section class="frame" style="--frameBg: var(--wine)">
+	<h1>
+		<a href="/projects/">See more projects.</a>
+	</h1>
 </section>
 
 
-			
 			<hr>
 	</main>
 

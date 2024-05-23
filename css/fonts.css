@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'Tommy Soft';
     src: url('../fonts/TommySoft/Tommy Soft Regular.otf') format('opentype');
@@ -19,64 +21,6 @@
     font-family: 'Karrik';
     src: url('../fonts/Karrik/Karrik-Italic.woff2') format('woff2'),
         url('../fonts/Karrik/Karrik-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Speeches And Cream';
-    src: url('../fonts/SpeechesAndCream/SpeechesAndCreamBold.woff2') format('woff2'),
-        url('../fonts/SpeechesAndCreamBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Speeches And Cream';
-    src: url('../fonts/SpeechesAndCream/SpeechesAndCreamItalic.woff2') format('woff2'),
-        url('../fonts/SpeechesAndCream/SpeechesAndCreamItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Speeches And Cream';
-    src: url('../fonts/SpeechesAndCream/SpeechesAndCreamBoldItalic.woff2') format('woff2'),
-        url('../fonts/SpeechesAndCream/SpeechesAndCreamBoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Speeches And Cream';
-    src: url('../fonts/SpeechesAndCream/SpeechesAndCreamRegular.woff2') format('woff2'),
-        url('../fonts/SpeechesAndCream/SpeechesAndCreamRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Argent Pixel CF';
-    src: url('../fonts/ArgentPixelCF/ArgentPixelCF-Regular.eot');
-    src: url('../fonts/ArgentPixelCF/ArgentPixelCF-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ArgentPixelCF/ArgentPixelCF-Regular.woff2') format('woff2'),
-        url('../fonts/ArgentPixelCF/ArgentPixelCF-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Argent Pixel CF';
-    src: url('../fonts/ArgentPixelCF/ArgentPixelCF-Italic.eot');
-    src: url('../fonts/ArgentPixelCF/ArgentPixelCF-Italic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ArgentPixelCF/ArgentPixelCF-Italic.woff2') format('woff2'),
-        url('../fonts/ArgentPixelCF/ArgentPixelCF-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
