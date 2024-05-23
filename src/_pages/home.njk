@@ -4,21 +4,32 @@ layout: base.njk
 permalink: /
 ---
 
-<section id="blurb">
-	<h1>Hey, I'm Siobhan!</h1>
+{# <section id="blurb">
+	
 	<img src="/img/home.jpg" alt="A filtered photo of Sabby during an event.">
-</section>
+</section> #}
 
-<section id="intro">
-	<p>
-		I'm a multidisciplinary videogame artist and community organiser living in Naarm (Melbourne).
-	</p>
-	<p> Here are a couple of the things that I've been up to: </p>
+<section id="intro" class="frame">
+
+	<h1>Hey, I'm Siobhan!</h1>
+
+	<div class="flex-col">
+	<div id="bio">
+		<p>
+			I'm a game developer and community organiser living in Naarm (Melbourne).
+		</p>
+		<p> I worked on the Freeplay Award nominated Bell's Beach! You might have seen me at Parallels in 2021 and 2023.
+	</div>
+	<div id="latest">
+	<h3> Curious what I've been up to? </h3>
+	<hr>
 	<ul>
-		<li> I co-manage the playful co-working and gallery space <a href="{{ site.link.sabby }}">Sabby.</a></li>
+		<li> I co-manage the playful event/coworking space <a href="{{ site.link.sabby }}">Sabby.</a></li>
 		<li> I teach a free yearly Game-a-Week workshop. </li>
-		<li> I share <a href="{{ site.link.itch }}">weird and wonderful games</a> with the world! </li>
+		<li> I'm a recurring panelist with the <a href="{{ site.link.trash }}">Trash Enthusaists Society.</a> </li>
+		<li> I'm always <a href="{{ site.link.itch }}">working on new games</a> to share! </li>
 	</ul>
+	</div>
 </section>
 
 <hr>

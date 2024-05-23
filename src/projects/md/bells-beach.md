@@ -12,3 +12,5 @@ imgpath: bells-beach
 Bell’s Beach is a silly exploration platformer where fishing is taken to its illogical extreme. 
 
 Run and jump around a vibrant coastal town, chatting with eccentric locals, and search for fishing spots that only a keen eye and a slightly mad mind will be able to discover.
+
+Featured at Freeplay: Parallels, St. Kilda Film Fest, ACMI, and Sabby Gallery.

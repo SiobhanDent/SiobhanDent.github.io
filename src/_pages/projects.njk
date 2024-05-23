@@ -10,7 +10,7 @@ permalink: /projects/
 	<h1>Past Projects</h1>
 
 	<ul class="project-list">
-	{% for project in collections.projects | reverse %}
+	{% for project in collections.byYear %}
 		<li> 
 		<a href="{{project.url}}">
 		<!-- TODO: CONVERT TO JPG -->

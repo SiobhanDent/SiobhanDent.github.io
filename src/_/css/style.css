@@ -29,7 +29,6 @@
 
 body {
 	background-color: var(--bgCol);
-	/*background-image:  linear-gradient(var(--grey) 1px, transparent 1px), linear-gradient(to right, var(--grey) 1px, var(--bgCol) 1px);*/
 	background-size: 20px 20px;
 
 	color: var(--textCol);
@@ -59,7 +58,8 @@ header {
 	aspect-ratio: 3.33 / 1;
 }
 
-#masthead:hover { background-color: var(--wine); border-radius: 40px; }
+/* #masthead:hover { background-color: var(--wine); border-radius: 40px; } */
+
 
 #logo {
 	height: auto;
@@ -91,16 +91,16 @@ nav ul li {
 nav button {
 	background-color: var(--lightgreen);
 	border: 4px solid var(--wine);
-	border-radius: 24px;
+	border-radius: 16px;
 	box-shadow: -8px 8px var(--wine);
 
-	font-family: "Speeches And Cream", sans-serif;
-	font-size: 0.9em;
-	font-style: italic;
+	font-family: "Grandstander", sans-serif;
+	font-size: 1em;
+	font-style: normal;
 	font-weight: bold;
 	text-transform: uppercase;
 
-	padding: 12px;
+	padding: 10px;
 	height: 100%;
 
 	color: var(--orange);
@@ -218,8 +218,60 @@ main > hr { margin-inline: 1em }
 	text-shadow: -6px 6px var(--bgCol);
 }
 
+#bio {
+	flex-basis: 40%;
+	align-self: center;
+	font-size: 1.2em;
+}
+
+#latest {
+	flex-basis:60%;
+	align-self: center;
+}
+
+#latest h3 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#intro {
+	margin-top: 2em;
+}
+
+#intro a {
+	color: var(--orange);
+	font-family: "Grandstander";
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#intro hr {
+	border-color: var(--wine);
+}
+
+#intro h1 {
+	text-align: center;
+	align-self: center;
+
+	position: absolute;
+	top: 1.75em;
+  	left: 15%;
+
+  	transform: translateY(-100%);
+	font-size: clamp(3em, 7vw, 4em);
+	font-style: italic;
+	max-width: 30ch;
+	color: var(--textCol);
+	text-shadow: -6px 6px var(--bgCol);
+}
+
+/* #intro {
+	border: 8px solid var(--wine);
+	border-style: solid dashed solid dashed;
+} */
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Speeches And Cream", sans-serif;
+	font-family: "Grandstander", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -256,6 +308,8 @@ section.frame {
 	color: var(--frameText);
 	border-radius: 24px;
 }
+
+
 
 .flex-col {
 	display: flex;
@@ -297,7 +351,20 @@ section.frame {
 	margin-inline: 4px;
 	margin-block: 0.7em;
 
-	
+	padding-top: 0px;
+
+	border: 6px solid var(--wine);
+	border-radius: 16px;
+
+	background-color: var(--wine);
+
+	transform:scale(1);
+	transition: transform 0.2s ease;
+}
+
+.project-list li:hover {
+	transform: scale(1.1);
+	mix-blend-mode: hard-light;
 }
 
 .project-list p {
@@ -314,27 +381,27 @@ section.frame {
 	display: inline-block;
 	width: 100%;
 	/* aspect-ratio: 1 / 1; */
-	transform:scale(1);
-	transition: transform 0.2s ease;
+	
+	font-family: "Grandstander";
+	text-decoration: none;
+	font-size: 1.25sem;
 }
 
 .project-list li > a:hover {
-	opacity: 1;
-
-	transform: scale(1.1);
-	
+	opacity: 1;	
 }
 
 .project-list li > a img {
 	width: 100%;
 	height: 100%;
 	object-fit:contain;
+	border-radius: 32px/18px;
 	/* aspect-ratio: 1 / 1; */
 }
 
-.project-list li > a img:hover {
-	mix-blend-mode: screen;
-}
+/* .project-list li > a img:hover {
+	
+} */
 
 .project-list li i {
 	display: inline-block;
@@ -465,7 +532,7 @@ p img.emoji, span img.emoji {
 	max-width: 40ch;
 	width: auto;
 
-	font-family: "Speeches And Cream", sans-serif;
+	font-family: "Grandstander", sans-serif;
 	color: white;
 	text-decoration: none;
 	font-size: 1.2em;
@@ -489,12 +556,14 @@ p img.emoji, span img.emoji {
 		aspect-ratio: 5 / 4;
 	}
 
-	#blurb h1 {
-		top: unset;
-		left: unset;
-		transform: unset;
+	#intro h1 {
+		position: relative;
+		top:auto;
+		left:auto;
 		margin-inline: 0.5em;
+		margin: 0;
 		max-width: 100%;
+		transform: translateY(0%);
 	}
 
 	.flex-col {
