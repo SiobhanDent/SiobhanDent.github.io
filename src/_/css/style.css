@@ -435,16 +435,16 @@ section.frame {
 	margin-top: 1em;
 }
 
-/* #description p, #description li {
-	font-size: 0.8rem;
-} */
+#project {
+	flex-wrap: wrap;
+}
 
 #screenshot-gallery {
 	justify-content: center;
 }
 
 #screenshot-gallery img {
-	flex-basis: calc(33.333% - 8px);
+	flex-basis: calc(50% - 8px);
 
 	margin-inline: 4px;
 	margin-block: 0.7em;
