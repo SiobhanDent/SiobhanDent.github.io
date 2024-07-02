@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-	<title>Ephemeral / Siobhan!</title>
+	<title>title / Siobhan!</title>
 
 	<!-- Meta -->
 	<meta name="description" content="Game Developer and Community Organiser">
@@ -72,86 +72,27 @@
 	<main>
 			
 	
-<section id="project" class="flex-col" >	
-	<div class="title">
-		<h1>Ephemeral</h1>
+<section>	
+	<div class="flex-col">
+		<h1 class="blog-title">title</h1>
 
-		2020 |
-
-		
-			Solo Project
-		
-		
+		<p class="blog-date">02 Jul 2024</p>
+	
 	</div>
 
-	<!-- TODO: CONVERT WEBP TO JPG -->
-	<img class="poster flex-child" src="/img/projects/ephemeral/thumbnail.webp"></img>
+	<hr>
 
-	<article id="description" class="flex-child">
-	<h2>Actionless Action Platformer</h2>
-	<p>A meditative platformer about catching bugs and picking flowers while a gentle voice ushers you to the afterlife.</p>
-<p>Inspired by the idea of a peaceful version of Hollow Knight's acrobatic combat platforming.</p>
-<h4>Key Responsibilities and Accomplishments:</h4>
-<ul>
-<li>Designed and implemented a novel “bug net” mechanic which evokes the feeling of acrobatic, position-sensitive action platformer combat (e.g. Hollow Knight) while maintaining cohesion with the narrative</li>
-<li>Brought a complete and polished game experience from concept to completion in 48 hours, including time for playtesting</li>
-</ul>
+	<article class="blog-content">
+	<p>Content</p>
 
 	</article>
-</section>
-
-<section class="flex-col" id="screenshot-gallery">
-
-<script>
-
-	var bCheckEnabled = true;
-	var bFinishCheck = false;
-
-	var img;
-	var i = 1;
-
-	var myInterval = setInterval(loadImage, 1);
-
-	function loadImage() {
-
-		if (bFinishCheck) {
-			clearInterval(myInterval);
-			console.log('Loaded ' + i + ' image(s)!)');
-			return;
-		}
-
-		if (bCheckEnabled) {
-
-			bCheckEnabled = false;
-
-			img = new Image();
-			img.onload = fExists;
-			img.onerror = fDoesntExist;
-			img.src = "/img/projects/ephemeral/screenshot" + i + '.jpg';
-		}
-
-	}
-
-	function fExists() {
-		i++;
-		bCheckEnabled = true;
-		document.getElementById("screenshot-gallery").appendChild(img);
-	}
-
-	function fDoesntExist() {
-		bFinishCheck = true;
-		img = null;
-	}
-
-</script>
-
 </section>
 
 <hr>
 
 <section class="frame" style="--frameBg: var(--wine)">
 	<h1>
-		<a href="/projects/">See more projects.</a>
+		<a href="/blog/">See more blog posts.</a>
 	</h1>
 </section>
 

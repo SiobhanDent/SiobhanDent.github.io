@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-	<title>Ephemeral / Siobhan!</title>
+	<title>Blog / Siobhan!</title>
 
 	<!-- Meta -->
 	<meta name="description" content="Game Developer and Community Organiser">
@@ -71,91 +71,89 @@
 
 	<main>
 			
+			
+<style>.frame {--frameBg: var(--lightgreen);</style>
+
+<section>
+	<!--<h1 id="blog-home-title">Blog</h1>-->
+
+	<h1>Latest Post</h1>
+	<div style="display:flex;">
+		<div class="blog-left-col">
+		
+		<article class="blog">
+			<div class="flex-col">
+				<h2 class="blog-title" style="margin-top:0;">Virtue&#39;s Last Reward is so good</h2>
+				<date class="blog-date">22 Jul 2023</date>
+			</div>
+			<hr>
+			<div></div>
+			<br>
+			<span class="continue"><a href=/blogposts/md/virtues-last-reward/>Continue reading...</a></span>
+		</article>
 	
-<section id="project" class="flex-col" >	
-	<div class="title">
-		<h1>Ephemeral</h1>
 
-		2020 |
+		<h1>Recent Posts</h1>
+		<ul class="blog-directory">
+		
+			<li onclick="location.href='/blogposts/md/virtues-last-reward/';" style="cursor: pointer;"> 
+				<!-- TODO: Move into style sheet -->
+				<div style="display:flex;">
+					<p style="flex-basis:50%; font-weight:bold; color: var(--lightgreen);">Virtue&#39;s Last Reward is so good</p>
+					<p style="flex-basis:50%; text-align:right;"> 22 Jul 2023</p>
+				</div>
+			</li>
+		
+			<li onclick="location.href='/blogposts/md/nuzlockes-ttrpgs/';" style="cursor: pointer;"> 
+				<!-- TODO: Move into style sheet -->
+				<div style="display:flex;">
+					<p style="flex-basis:50%; font-weight:bold; color: var(--lightgreen);">Nuzlockes are like TTRPGs</p>
+					<p style="flex-basis:50%; text-align:right;"> 14 Jul 2023</p>
+				</div>
+			</li>
+		
+			<li onclick="location.href='/blogposts/md/cloud-of-unknowing/';" style="cursor: pointer;"> 
+				<!-- TODO: Move into style sheet -->
+				<div style="display:flex;">
+					<p style="flex-basis:50%; font-weight:bold; color: var(--lightgreen);">Cloud of Unknowing</p>
+					<p style="flex-basis:50%; text-align:right;"> 01 Jul 2023</p>
+				</div>
+			</li>
+		
+			<li onclick="location.href='/blogposts/md/open-world/';" style="cursor: pointer;"> 
+				<!-- TODO: Move into style sheet -->
+				<div style="display:flex;">
+					<p style="flex-basis:50%; font-weight:bold; color: var(--lightgreen);">Pokemon, Stagnation and the Open-World Monogenre</p>
+					<p style="flex-basis:50%; text-align:right;"> 21 Mar 2023</p>
+				</div>
+			</li>
+		
+		</ul>
+		</div>
+		<div class="blog-right-col">
 
-		
-			Solo Project
-		
-		
+			<h4>Recommended Posts</h4>
+			<hr>
+			<ul>
+				
+					<li>
+						<a href="/blogposts/md/open-world/">Pokemon, Stagnation and the Open-World Monogenre</a>
+					</li>
+				
+			</ul>
+			<h4>My Fiction</h4>
+			<hr>
+			<ul>
+				
+					<li>
+						<a href="/blogposts/md/cloud-of-unknowing/">Cloud of Unknowing</a>
+					</li>
+				
+			</ul>
+		</div>
 	</div>
-
-	<!-- TODO: CONVERT WEBP TO JPG -->
-	<img class="poster flex-child" src="/img/projects/ephemeral/thumbnail.webp"></img>
-
-	<article id="description" class="flex-child">
-	<h2>Actionless Action Platformer</h2>
-	<p>A meditative platformer about catching bugs and picking flowers while a gentle voice ushers you to the afterlife.</p>
-<p>Inspired by the idea of a peaceful version of Hollow Knight's acrobatic combat platforming.</p>
-<h4>Key Responsibilities and Accomplishments:</h4>
-<ul>
-<li>Designed and implemented a novel “bug net” mechanic which evokes the feeling of acrobatic, position-sensitive action platformer combat (e.g. Hollow Knight) while maintaining cohesion with the narrative</li>
-<li>Brought a complete and polished game experience from concept to completion in 48 hours, including time for playtesting</li>
-</ul>
-
-	</article>
 </section>
-
-<section class="flex-col" id="screenshot-gallery">
-
-<script>
-
-	var bCheckEnabled = true;
-	var bFinishCheck = false;
-
-	var img;
-	var i = 1;
-
-	var myInterval = setInterval(loadImage, 1);
-
-	function loadImage() {
-
-		if (bFinishCheck) {
-			clearInterval(myInterval);
-			console.log('Loaded ' + i + ' image(s)!)');
-			return;
-		}
-
-		if (bCheckEnabled) {
-
-			bCheckEnabled = false;
-
-			img = new Image();
-			img.onload = fExists;
-			img.onerror = fDoesntExist;
-			img.src = "/img/projects/ephemeral/screenshot" + i + '.jpg';
-		}
-
-	}
-
-	function fExists() {
-		i++;
-		bCheckEnabled = true;
-		document.getElementById("screenshot-gallery").appendChild(img);
-	}
-
-	function fDoesntExist() {
-		bFinishCheck = true;
-		img = null;
-	}
-
-</script>
-
-</section>
-
-<hr>
-
-<section class="frame" style="--frameBg: var(--wine)">
-	<h1>
-		<a href="/projects/">See more projects.</a>
-	</h1>
-</section>
-
-
+			
 			<hr>
 	</main>
 
