@@ -1,0 +1,63 @@
+---
+title: Blog
+layout: base.njk
+permalink: /blog/
+---
+
+<style>.frame {--frameBg: var(--lightgreen);</style>
+
+<section>
+	<!--<h1 id="blog-home-title">Blog</h1>-->
+
+	<h1>Latest Post</h1>
+	<div style="display:flex;">
+		<div class="blog-left-col">
+		{% set post = collections.blogPosts | reverse | first %}
+		<article class="blog">
+			<div class="flex-col">
+				<h2 class="blog-title" style="margin-top:0;">{{ post.data.title }}</h2>
+				<date class="blog-date">{{ post.date | readableDate}}</date>
+			</div>
+			<hr>
+			<div>{{ post.data.page.excerpt | safe }}</div>
+			<br>
+			<span class="continue"><a href={{ post.url }}>Continue reading...</a></span>
+		</article>
+	
+
+		<h1>Recent Posts</h1>
+		<ul class="blog-directory">
+		{% for post in collections.blogPosts | reverse %}
+			<li onclick="location.href='{{post.url}}';" style="cursor: pointer;"> 
+				<!-- TODO: Move into style sheet -->
+				<div style="display:flex;">
+					<p style="flex-basis:50%; font-weight:bold; color: var(--lightgreen);">{{ post.data.title}}</p>
+					<p style="flex-basis:50%; text-align:right;">{{ post.page.date.toUTCString().substring(4,16)}}</p>
+				</div>
+			</li>
+		{% endfor %}
+		</ul>
+		</div>
+		<div class="blog-right-col">
+
+			<h4>Recommended Posts</h4>
+			<hr>
+			<ul>
+				{% for featured in collections.featuredPosts %}
+					<li>
+						<a href="{{featured.url}}">{{featured.data.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<h4>My Fiction</h4>
+			<hr>
+			<ul>
+				{% for fic in collections.fiction %}
+					<li>
+						<a href="{{fic.url}}">{{fic.data.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

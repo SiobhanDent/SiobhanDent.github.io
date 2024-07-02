@@ -1,0 +1,28 @@
+{% extends "base.njk" %}
+
+{% block content %}
+	
+<section>	
+	<div class="flex-col">
+		<h1 class="blog-title">{{ title }}</h1>
+
+		<p class="blog-date">{{ page.date | readableDate }}</p>
+	
+	</div>
+
+	<hr>
+
+	<article class="blog-content">
+	{{ content | safe }}
+	</article>
+</section>
+
+<hr>
+
+<section class="frame" style="--frameBg: var(--wine)">
+	<h1>
+		<a href="/blog/">See more blog posts.</a>
+	</h1>
+</section>
+
+{% endblock %}

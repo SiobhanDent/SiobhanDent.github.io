@@ -2,6 +2,7 @@
 const pluginNavigation = require("@11ty/eleventy-navigation");
 //const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const embedEverything = require("eleventy-plugin-embed-everything");
 
 // markdown-it plugins
 const markdownIt = require('markdown-it');
@@ -18,19 +19,12 @@ module.exports = function(config) {
 	// Customised markdown library
 
 	var md = markdownIt({html: true, breaks: true, linkify: true});
-	// md.use(markdownItAnchor, {
-	// 	permalink: markdownItAnchor.permalink.ariaHidden({
-	// 		placement: 'after',
-	// 		class: 'direct-link',
-	// 		symbol: '#',
-	// 		level: [1,2,3,4],
-	// 	}),
-	// });
+
 	md.use(markdownItAttrs, {});
 	md.use(markdownItFigures, {
 		// lazy: true,
 		// async: true,
-		figcaption: 'alt'
+		figcaption: true
 	});
 	
 	config.setLibrary('md', md);
@@ -44,6 +38,18 @@ module.exports = function(config) {
 			return Number(b.data.year) - Number(a.data.year);
 		});
 	});
+
+	config.addCollection("featuredPosts", function(collection) {
+		return collection.getFilteredByTag('Featured').sort(function(a, b) {
+			return Date(b.date) - Date(a.date);
+		});
+	});
+
+	config.addCollection("fiction", function(collection) {
+		return collection.getFilteredByTag('Fiction').sort(function(a, b) {
+			return Date(b.date) - Date(a.date);
+		});
+	});	
 
 	// -------------------------------------------------------------------- //
 	// Filters
@@ -65,6 +71,7 @@ module.exports = function(config) {
 	// Plugins
 	config.addPlugin(EleventyHtmlBasePlugin);
 	config.addPlugin(pluginNavigation);
+	config.addPlugin(embedEverything);
 	//config.addPlugin(pluginRSS);
 
 	// Passthrough

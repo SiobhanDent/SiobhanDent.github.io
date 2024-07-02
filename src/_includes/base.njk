@@ -60,6 +60,7 @@
 		</a>
 		<nav>
 			<ul>
+				<li><button onclick="document.location='{{ "/blog/" | url }}'">Blog</button></li>
 				<li><button onclick="document.location='{{ "/projects/" | url }}'">Projects</button></li>
 				<!-- TODO: Add about section -->
 				<!--<li><button onclick="document.location='{{ "/about/" | url }}'">About</button></li>-->
@@ -78,7 +79,7 @@
 	<footer>
 		<section id="footer-info">
 			<p id="acknowledgement">I live and work on the lands of the Wurundjeri Woi Wurrung people of the Kulin nation.</p>
-			<p><a href="{{ site.link.email }}">[email]</a> {{ site.email }}<br></p>
+			{# <p><a href="{{ site.link.email }}">[email]</a> {{ site.email }}<br></p> #}
 		</section>
 		<section id="footer-credits">
 			<p>{{ site.title }} &copy; <span id="currentYear">2024</span>
