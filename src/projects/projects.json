@@ -1,8 +1,0 @@
-{
-	"tags": ["projects"],
-	"category": "projects",
-	"layout": "project-post.njk",
-	"eleventyNavigation": {
-		"parent": "Blog"
-	}
-}

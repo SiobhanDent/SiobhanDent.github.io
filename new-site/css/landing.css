@@ -1,0 +1,22 @@
+:root {
+    --logo: #A0895E;
+    --logo-shadow: #6ee315;
+}
+
+.logo {
+    font-family: "Flavors";
+    color: var(--logo);
+}
+
+.polka-dots {
+    mask: url("../img/gradient-mask.png");
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
