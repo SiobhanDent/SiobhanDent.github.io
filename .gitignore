@@ -132,3 +132,6 @@ build
 
 #DS Store.......... >:(
 .DS_Store
+
+# Eleventy generated site
+_site/
