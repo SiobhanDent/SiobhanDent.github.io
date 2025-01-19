@@ -4,12 +4,12 @@
 }
 
 .logo {
-    font-family: "Flavors";
+    font-family: "Itim";
     color: var(--logo);
 }
 
 .polka-dots {
-    mask: url("../img/gradient-mask.png");
+    mask: url("/public/img/gradient-mask.png");
     mask-mode: alpha;
     mask-repeat: no-repeat;
     mask-size: 100%;

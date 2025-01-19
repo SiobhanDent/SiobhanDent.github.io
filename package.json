@@ -10,8 +10,8 @@
   "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "start": "npx @11ty/eleventy --serve --config=eleventy.config.js",
+    "build": "npx @11ty/eleventy --config=eleventy.config.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

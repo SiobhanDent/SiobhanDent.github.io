@@ -134,4 +134,4 @@ build
 .DS_Store
 
 # Eleventy generated site
-_site/
+_build/

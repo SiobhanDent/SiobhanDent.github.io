@@ -1,0 +1,52 @@
+/*
+============================
+  SIDE NAV BAR
+============================
+*/
+
+.sidenav {
+    background-color: var(--bg-secondary);
+
+    height: 100%;
+    width: 10rem;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+/* .sidenav-item {
+    list-style-image: url("../img/star.svg");
+} */
+
+.sidenav-item::before {
+    content:  url("/public/img/star.svg");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sidenav-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidenav-credits {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gooby-view {
+    margin-top:auto;
+    margin-bottom: 1rem
+}

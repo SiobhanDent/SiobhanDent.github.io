@@ -60,7 +60,6 @@ camera.position.z += 5;
 controls.update();
 
 
-
 function animate() {
 	controls.update();
 	renderer.render( scene, camera );

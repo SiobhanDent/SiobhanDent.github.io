@@ -1,12 +1,10 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
-export default function (eleventyConfig) {
+export default async function (eleventyConfig) {
 
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	eleventyConfig.addPassthroughCopy({ "src/__passthrough": "."});
 
     eleventyConfig.setServerOptions({
-		// Default values are shown:
-
 		// Whether the live reload snippet is used
 		liveReload: true,
 
@@ -47,5 +45,15 @@ export default function (eleventyConfig) {
 		// for on-request processing (read more below).
 		onRequest: {},
 	});
+
+	return {
+		htmlTemplateEngine: "liquid",
+		markdownTemplateEngine: "liquid",
+		dir: {
+			input: "src",
+			data: "_includes/_data",
+			output: "_build"
+		},
+	};
 };
 
