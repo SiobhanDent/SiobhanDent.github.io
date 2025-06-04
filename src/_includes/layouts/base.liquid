@@ -32,10 +32,20 @@ title: Base
   <link rel="manifest" href="site.webmanifest">
   
   <script src="/js/vendor/jquery.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/node_modules/three/build/three.module.js",
+      "three/addons/": "/node_modules/three/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <img class="polka-dots" src="/public/img/polka-dots.png">
+  {% comment %} <img class="polka-dots" src="/public/img/polka-dots.png"> {% endcomment %}
+  <img class="background" src="/public/img/neumoniaa.png">
 
     {{content}}
 

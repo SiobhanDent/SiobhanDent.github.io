@@ -2,7 +2,16 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default async function (eleventyConfig) {
 
-	eleventyConfig.addPassthroughCopy({ "src/__passthrough": "."});
+	eleventyConfig.addPassthroughCopy({
+		 "src/__passthrough": ".",
+		 "node_modules/three/build": "node_modules/three/build",
+		 "node_modules/three/examples": "node_modules/three/examples",
+		//  "node_modules/three/build/three.core.min.js": "js/vendor/three/three.core.min.js",
+		//  "node_modules/three/build/three.module.min.js": "js/vendor/three/three.module.min.js",
+		//  "node_modules/three/build/three.tsl.min.js": "js/vendor/three/three.tsl.min.js",
+		//  "node_modules/three/build/three.webgpu.min.js": "js/vendor/three/three.webgpu.min.js",
+		//  "node_modules/three/build/three.webgpu.nodes.min.js": "js/vendor/three/three.webgpu.nodes.min.js"	
+		});
 
     eleventyConfig.setServerOptions({
 		// Whether the live reload snippet is used

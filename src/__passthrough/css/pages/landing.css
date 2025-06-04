@@ -4,8 +4,9 @@
 }
 
 .logo {
-    font-family: "Itim";
-    color: var(--logo);
+    font-family: "Okay Jelly";
+    color: var(--txt-secondary);
+    text-align: center;
 }
 
 .polka-dots {
@@ -19,4 +20,13 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+}
+
+.background {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(2) grayscale(10);
+    opacity: 40%;
 }

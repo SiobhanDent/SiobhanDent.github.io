@@ -3,7 +3,6 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { color } from 'three/tsl';
 
 const scene = new THREE.Scene({alpha: true});
 const camera = new THREE.PerspectiveCamera( 35, 1, 0.1, 1000 );
@@ -12,8 +11,8 @@ const renderer = new THREE.WebGLRenderer({alpha:true});
 renderer.setSize( 150, 150 );
 
 const domElement = renderer.domElement;
-domElement.className = "gooby-view";
-$("#sidenav").append(domElement);
+domElement.className = "gooby-render";
+$("#gooby-view").append(domElement);
 
 const controls = new OrbitControls( camera, renderer.domElement );
 controls.enablePan = false;

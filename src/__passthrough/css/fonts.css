@@ -28,6 +28,20 @@
     font-weight: 200 800;
 }
 
+@font-face {
+    font-family: "Okay Jelly";
+    src:
+        local("OkayJelly"),
+        url("../font/OkayJelly.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Fredoka";
+    src:
+        local("Fredoka"),
+        url("../font/Fredoka-Variable.ttf") format("truetype");
+    font-weight: 200 800;
+}
 
 /* <weight>: Use a value from 200 to 800 */
 .bricolage-grotesque-standard {
