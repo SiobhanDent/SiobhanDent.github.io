@@ -1,0 +1,89 @@
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #acceb7be;
+    --bg-tertiary: #9c9ccdbe;
+    --txt-primary: #ffffff;
+    --txt-secondary: #332d33;
+    --txt-tertiary: darkslateblue;
+    
+    --hr-colour: #ccc;
+
+    background-color: var(--bg-primary);
+    color: var(--txt-primary);
+    
+    font-family: "Bricolage Grotesque";
+}
+
+/* 
+============================
+       MAIN PAGE LAYOUT
+============================
+*/
+
+body {
+    position: absolute;
+    /*left:13rem;**/
+    /*max-width: 70ch;*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin:auto;
+}
+
+/* 
+============================
+  ADJUSTMENTS TO BASE TAGS
+============================
+*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--hr-colour);
+    margin: 1em 0;
+    padding: 0;
+}
+
+a {
+    color: var(--txt-tertiary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--txt-secondary);
+}
+
+/*
+============================
+  GENERAL PURPOSE CLASSES
+============================
+*/
+
+.container-general {
+    border-radius: 1rem;
+    /* border: 3px solid var(--txt-primary); */
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+}
+
+.container-general p {
+    margin: 0;
+}
+
+.list-header {
+    margin-bottom: 0;
+}
