@@ -17,6 +17,6 @@ jobs:
       - name: Deploy to live branch
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: build
+          publish_dir: _build
           publish_branch: live
           github_token: ${{ secrets.GITHUB_TOKEN }}
