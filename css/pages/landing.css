@@ -1,0 +1,55 @@
+:root {
+    --logo: #A0895E;
+    --logo-shadow: #6ee315;
+}
+
+.logo {
+    color: var(--txt-secondary);
+    text-align: center;
+}
+
+.polka-dots {
+    mask: url("/public/img/gradient-mask.png");
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.background {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(2) grayscale(10);
+    opacity: 40%;
+}
+
+.bg {
+    image-rendering: pixelated;
+    z-index: -2;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.sludgeheart {
+    margin-top: auto;
+    margin-bottom: auto;
+    image-rendering: pixelated;
+    transform: scale(100%);
+    transition: transform 0.25s;
+}
+
+.sludgeheart:hover {
+    transform: scale(105%);
+}
