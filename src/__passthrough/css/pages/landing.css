@@ -18,3 +18,7 @@
 .sludgeheart:hover {
     transform: scale(105%);
 }
+
+.sludgeheart img {
+    max-width: 99%;
+}
