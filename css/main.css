@@ -38,6 +38,9 @@ body {
 
 .footer {
     text-align: center;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
     margin-top: 1rem;
 }
 
@@ -48,7 +51,6 @@ body {
     margin:auto;
 
     max-width: 80ch;
-    min-width: 80ch;
 }
 
 /* 
