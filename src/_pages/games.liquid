@@ -1,0 +1,19 @@
+---
+layout: "layouts/base.liquid"
+title: "GAMES"
+permalink: /games.html
+eleventyImport:
+  collections: ["games"]
+---
+
+<section class="content">
+  {% include "partials/navbar.liquid" %}
+
+  <div class="container-general ver">
+    {% comment %} {%  for game in collections.games %}  
+        <p>{{game.data.title}}</p>
+    {% endfor %}      {% endcomment %}
+
+    <p>I wanna give this page some love, but in the meantime, you can go to my <a href="https://siobhan-dent.itch.io">itch page</a> to look at my games work :)</p>
+  </div>
+</section>

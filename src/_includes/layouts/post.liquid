@@ -1,5 +1,5 @@
 ---
-title: Base
+title: Post
 ---
 
 <!doctype html>
@@ -47,9 +47,13 @@ title: Base
   <img class="bg" src="/public/img/atoms.png">
   <img class="nemo" src="/public/img/neumoniaa.png">
   
-  {{content}}
+  <section class="content">
+  <div class="container-general ver">
+    {{content}}
+  </div>
+  </section>
 
-  {% comment %} {% include "partials/footer.liquid" %} {% endcomment %}
+  {% include "partials/footer.liquid" %}
 
   <script type="module" src="/js/app.js"></script>
 </body>

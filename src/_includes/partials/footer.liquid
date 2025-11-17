@@ -1,6 +1,18 @@
+<head>
+  <style>
+    #gooby-view {
+    z-index: 1;
+    position:fixed;
+    right:0%;
+    bottom: 0%;
+  }
+  </style>
+</head>
 <footer class="footer">
-    <hr>
-    <div class="container-general">
-      © Siobhan Dent (CURRENT YEAR)
+    <div class="container-general hor">
+      <p>© Siobhan Dent {{ "now" | date: "%Y" }}</p>
     </div>
+    <div id="gooby-view"></div>
+    
+    <script src="/js/gooby.js" type="module"></script>
 </footer>

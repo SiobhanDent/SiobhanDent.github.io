@@ -1,24 +1,21 @@
 ---
 layout: "layouts/base.liquid"
-title: "Slippy's Place"
+title: "HOME"
 permalink: /home.html
 ---
 
-<link rel="stylesheet" type="text/css" href="css/pages/landing.css">
+<head>
+<link rel="stylesheet" type="text/css" href="css/pages/home.css">
+</head>
 
 {% comment %} {% include "partials/sidenav.liquid" %} {% endcomment %}
 
-<header>
-    {% comment %} <link rel="stylesheet" type="text/css" href="css/ticker.css">
-    <div class="ticker-wrap">
-      <div class="ticker">
-        <div class="ticker__item">Welcome to Slippy's Place!</div>
-        <div class="ticker__item">I still dream of Orgonon</div>
-        <div class="ticker__item">You know what would be the shit?</div>
-      </div>
-    </div> {% endcomment %}
-</header>
+<section class="content">
 
-<section class="content">  
-    
+  {% include "partials/navbar.liquid" %}
+
+  <div class="container-general ver">
+    <p>I'm Siobhan, sometimes Neumoniaa or Nemo. She/it ΘΔ.</p>
+    <p>Multimedia artist, game developer, Goodra irl, silly thing, complex beast.</p>
+  </div>
 </section>

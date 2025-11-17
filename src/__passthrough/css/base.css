@@ -1,0 +1,23 @@
+.bg {
+    image-rendering: pixelated;
+    object-fit: cover;
+    z-index: -5;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+    
+}
+
+.nemo {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(2) grayscale(10);
+    opacity: 40%;
+    object-fit: cover;
+}
