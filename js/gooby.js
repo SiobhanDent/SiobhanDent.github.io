@@ -25,7 +25,7 @@ controls.minDistance = 5;
 const textureLoader = new THREE.TextureLoader();
 const gltfLoader = new GLTFLoader();
 
-const texture = textureLoader.load("../public/Goob.png");
+const texture = textureLoader.load("../../../public/Goob.png");
 texture.colorSpace = THREE.SRGBColorSpace;
 texture.wrapS = THREE.RepeatWrapping;
 texture.wrapT = THREE.RepeatWrapping;
@@ -40,7 +40,7 @@ const material = new THREE.MeshBasicMaterial(
 	}
 );
 
-gltfLoader.load("../public/Gooby.glb", function(gltf) {
+gltfLoader.load("../../../public/Gooby.glb", function(gltf) {
 	const content = gltf.scene;
 	content.traverse( function ( child ) {
 		// Only child is gooby :)
