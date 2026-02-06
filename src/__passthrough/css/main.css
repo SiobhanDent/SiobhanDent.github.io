@@ -25,15 +25,14 @@ html {
 }
 
 body {
-    position: absolute;
-    /*left:13rem;**/
-    /*max-width: 70ch;*/
+    position: absolute;    
     width: 100%;
     height: 100%;
     margin: 1rem 0 0 0;
     
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 .footer {
@@ -51,6 +50,7 @@ body {
     margin:auto;
 
     max-width: 80ch;
+    overflow-y: scroll;
 }
 
 /* 
@@ -104,4 +104,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .list-header {
     margin-bottom: 0;
+}
+
+.no-background {
+    background-color: transparent;
+    background: none;
 }
