@@ -3,6 +3,10 @@
     --logo-shadow: #6ee315;
 }
 
+#landing-content {
+    overflow: hidden;
+}
+
 .logo {
     color: var(--txt-secondary);
     text-align: center;

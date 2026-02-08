@@ -1,6 +1,6 @@
 :root {
     --bg-primary: #000000;
-    --bg-secondary: #1e1820be;
+    --bg-secondary: #000000;
     --bg-tertiary: #9c9ccdbe;
     --txt-primary: #ffffff;
     --txt-secondary: #ffc9ff;
@@ -11,7 +11,7 @@
     background-color: var(--bg-primary);
     color: var(--txt-primary);
     
-    font-family: "Bricolage Grotesque";
+    font-family: "SUSE Mono";
 }
 
 /* 
@@ -35,22 +35,16 @@ body {
     overflow-y: hidden;
 }
 
-.footer {
-    text-align: center;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    margin-top: 1rem;
-}
-
 .content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin:auto;
 
-    max-width: 80ch;
-    overflow-y: scroll;
+    /* max-width: 80ch; */
+     overflow-y: scroll;
+
+    /* min-width: 75ch; */
 }
 
 /* 
@@ -72,6 +66,18 @@ a {
     color: var(--txt-tertiary);
 }
 
+a:hover {
+    filter: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="waves" x="0" y="0" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">\
+        <feTurbulence type="turbulence" baseFrequency="0.05 0.05" numOctaves="1" seed="1" stitchTiles="noStitch" result="turbulence">\
+            <animate attributeName="seed" begin="0s" dur="1s" from="0" to="15" repeatCount="indefinite"/>\
+        </feTurbulence>\
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" xChannelSelector="R" yChannelSelector="G" result="displacementMap"/>\
+      </filter>\
+    </svg>#waves');
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--txt-secondary);
 }
@@ -88,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;  
     display: flex;
     gap: 0.25rem;
+
+    border: 10px solid transparent;
+    border-image:url("../public/img/stars.gif") 10 repeat;
+    
 }
 
 .ver {
@@ -96,6 +106,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hor {
     flex-direction: horizontal;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container-general p {
@@ -109,4 +122,9 @@ h1, h2, h3, h4, h5, h6 {
 .no-background {
     background-color: transparent;
     background: none;
+}
+
+.no-border {
+    border: none;
+    border-image: none;
 }

@@ -24,7 +24,7 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/partials/base.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <link rel="manifest" href="site.webmanifest">
   
@@ -44,22 +44,31 @@
   <img class="bg" src="/public/img/atoms.png">
   
   
+<head>
+    <link rel="stylesheet" type="text/css" href="css/pages/writing.css">
+</head>
 
 <section class="content">
 
   <head>
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/partials/navbar.css">
 </head>
 <div class="container-general hor navbar" style="justify-content:center">
-    <a href="home.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="writing.html">Writing</a>
-    <a href="stuff.html">Stuff</a>
-  </div>
+    <a id="home" href="home.html">[HOME]</p></a>
+    <a id="writing" href="writing.html">[WRITING]</a>
+    <a id="blog" href="blog.html">[BLOG]</a>
+    <a id="love" href="love.html">[LOVE]</a>
+    <a id="shower" href="shower.html">[SHOWER]</a>
+    <a id="door" href="door.html">[DOOR]</a>
+</div>
+
 
   <div class="container-general ver">
-      
+     
+      <div class="listEntry">
         <a href="/_pages/writing/cloud-of-unknowing/">CLOUD OF UNKNOWING</a>
+        <p class="meta">07/07/2023</p>
+      </div> 
     
   </div>
 </section>
@@ -73,11 +82,13 @@
     bottom: 0%;
   }
   </style>
+
+  <link rel="stylesheet" type="text/css" href="css/partials/footer.css">
   
 </head>
 <footer class="footer">
-    <div class="container-general hor no-background">
-      <p>© Siobhan Dent 2026</p>
+    <div class="container-general hor no-background no-border">
+      <p id="copyright">© Siobhan Dent 2026</p>
     </div>
     <div id="gooby-view"></div>
     
@@ -87,6 +98,26 @@
   <script type="module" src="/js/app.js"></script>
 </body>
 
+<head>
+  <style>
+    #gooby-view {
+    z-index: 1;
+    position:fixed;
+    right:0%;
+    bottom: 0%;
+  }
+  </style>
 
+  <link rel="stylesheet" type="text/css" href="css/partials/footer.css">
+  
+</head>
+<footer class="footer">
+    <div class="container-general hor no-background no-border">
+      <p id="copyright">© Siobhan Dent 2026</p>
+    </div>
+    <div id="gooby-view"></div>
+    
+    <script src="/js/gooby.js" type="module"></script>
+</footer>
 
 </html>
