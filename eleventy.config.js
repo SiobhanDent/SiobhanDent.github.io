@@ -22,7 +22,7 @@ export default async function (eleventyConfig) {
 
 		// The starting port number
 		// Will increment up to (configurable) 10 times if a port is already in use.
-		port: 8080,
+		port: 5050,
 
 		// Additional files to watch that will trigger server updates
 		// Accepts an Array of file paths or globs (passed to `chokidar.watch`).

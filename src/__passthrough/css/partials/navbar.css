@@ -4,7 +4,27 @@
     text-decoration: none;
 }
 
-img {
-    width: 200px;
-    height: 200px;
+
+#home {
+    color: aquamarine;
+}
+
+#writing {
+    color:springgreen;
+}
+
+#blog {
+    color: wheat;
+}
+
+#love {
+    color: palevioletred;
+}
+
+#shower {
+    color: lightblue;
+}
+
+#door {
+    color:burlywood;
 }

@@ -6,14 +6,20 @@ eleventyImport:
   collections: ["writing"]
 ---
 
+<head>
+    <link rel="stylesheet" type="text/css" href="css/pages/writing.css">
+</head>
 
 <section class="content">
 
   {% include "partials/navbar.liquid" %}
 
   <div class="container-general ver">
-    {%  for post in collections.writing %}  
+    {%  for post in collections.writing reversed %} 
+      <div class="listEntry">
         <a href="{{post.url}}">{{post.data.title}}</a>
+        <p class="meta">{{post.data.date | date: "%d/%m/%Y"}}</p>
+      </div> 
     {% endfor %}
   </div>
 </section>
