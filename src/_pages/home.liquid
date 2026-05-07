@@ -2,10 +2,17 @@
 layout: "layouts/base.liquid"
 title: "HOME"
 permalink: /home.html
+eleventyImport: ["characters"]
 ---
 
 <head>
 <link rel="stylesheet" type="text/css" href="css/pages/home.css">
+<link rel="stylesheet" type="text/css" href="css/pages/love.css">
+{% assign min = 0 %}
+{% assign max = characters.size %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%d" | modulo: diff | plus: min %}
+{% assign featured = characters.boys[randomNumber] %}
 </head>
 
 {% comment %} {% include "partials/sidenav.liquid" %} {% endcomment %}
@@ -14,8 +21,52 @@ permalink: /home.html
 
   {% include "partials/navbar.liquid" %}
 
+  
+
   <div class="container-general ver">
-    <p>I'm Siobhan, sometimes Neumoniaa or Nemo. She/it ΘΔ.</p>
-    <p>Multimedia artist, game developer, Goodra irl, silly thing, complex beast.</p>
+    <h1 style="margin:0">WELCOME</h1>
+    <!--Intro-->
+    <div class="container-general hor no-background no-border">
+      <div class="container-general ver no-background no-border" style="max-width: 60ch;">
+        <p>I'm Siobhan! Sometimes I go by Nemo or other things.</p>
+        <p>
+          I'm a multimedia artist and game developer based in Naarm, Australia. If you're looking for my games, you can find my itch <a href="siobhan-dent.itch.io">here.</a>
+        </p>
+        <p>
+          This is my personal site, where I keep things I don't keep anywhere else, and most of it is very silly :)
+          Thank you for stopping by <3
+        </p>
+        <p>
+          Im gooby
+        </p>
+      </div>
+
+      <div style="margin-right: auto;">
+        <img src="/public/img/nemo-goo.png" style="width:12rem">
+      </div>
+    </div>
+    
   </div>
+  
+  
+  <img id="featured-love" class="distortion" src="/public/img/featured-love.png">
+
+  <p style="text-align: center;">(updated daily, at random)</p>
+  <div class="container-general ver no-background no-border align-center">
+    <div class="container-general hor entry">
+        <div class="container-general ver textbox no-border">
+          <h2 style="margin-bottom: 0;">
+            ❤{{featured.name}}❤
+          </h2>
+          <h3 style="margin-top:0">
+            {{featured.from}}
+          </h3>
+          <p>{{featured.comment}}</p>
+        </div>        
+        <div class="container-general ver picturebox no-border">
+          <img class="picture" src="/public/img/characters/{{featured.img}}">
+        </div>
+    </div>
+  </div>
+  
 </section>

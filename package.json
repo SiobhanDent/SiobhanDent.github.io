@@ -12,6 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx @11ty/eleventy --serve --config=eleventy.config.js",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
     "build": "npx @11ty/eleventy --config=eleventy.config.js"
   },
   "devDependencies": {
@@ -27,6 +28,8 @@
   },
   "dependencies": {
     "@types/three": "^0.172.0",
+    "cross-env": "^10.1.0",
+    "json5": "^2.2.3",
     "liquidjs": "^10.20.1",
     "three": "^0.172.0"
   }

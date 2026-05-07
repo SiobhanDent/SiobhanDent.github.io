@@ -1,0 +1,22 @@
+.picture {
+    width: 12rem;
+    height: auto;
+}
+
+.picturebox {
+    margin-left: auto;
+}
+
+.textbox {
+    flex-basis: 22rem;
+}
+
+.entry {
+    max-width: 40rem;
+}
+
+#featured-love {
+    align-self: center;
+    margin-top:1rem;
+    max-width: 600px;
+}

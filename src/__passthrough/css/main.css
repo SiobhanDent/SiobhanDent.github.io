@@ -1,6 +1,6 @@
 :root {
     --bg-primary: #000000;
-    --bg-secondary: #000000;
+    --bg-secondary: #000000ba;
     --bg-tertiary: #9c9ccdbe;
     --txt-primary: #ffffff;
     --txt-secondary: #ffc9ff;
@@ -82,6 +82,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--txt-secondary);
 }
 
+.distortion {
+    filter: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="waves" x="0" y="0" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">\
+        <feTurbulence type="turbulence" baseFrequency="0.05 0.05" numOctaves="1" seed="1" stitchTiles="noStitch" result="turbulence">\
+            <animate attributeName="seed" begin="0s" dur="1s" from="0" to="15" repeatCount="indefinite"/>\
+        </feTurbulence>\
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" xChannelSelector="R" yChannelSelector="G" result="displacementMap"/>\
+      </filter>\
+    </svg>#waves');
+}
+
 /*
 ============================
   GENERAL PURPOSE CLASSES
@@ -97,7 +109,6 @@ h1, h2, h3, h4, h5, h6 {
 
     border: 10px solid transparent;
     border-image:url("../public/img/stars.gif") 10 repeat;
-    
 }
 
 .ver {
@@ -127,4 +138,8 @@ h1, h2, h3, h4, h5, h6 {
 .no-border {
     border: none;
     border-image: none;
+}
+
+.align-center {
+    align-items: center;
 }

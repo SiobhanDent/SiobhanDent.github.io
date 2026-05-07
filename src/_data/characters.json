@@ -1,0 +1,41 @@
+{
+    "boys": [
+        {
+            "name": "Pete Martell",
+            "img": "pete.jpg",
+            "from": "Twin Peaks",
+            "comment": "He's so moe..."
+        },
+        {
+            "name": "Jay McCarrol",
+            "img": "jay.jpg",
+            "from": "Nirvanna the Band the Show",
+            "comment": "I think he looks like a boy I used to have a crush on. I'm not sure who, though."
+        },
+        {
+            "name": "Ushiromiya Battler",
+            "img": "battler.jpg",
+            "from": "Umineko",
+            "comment": "The most tortured boy ever. Let me hold him..."
+        },
+        {
+            "name": "Ronove",
+            "img": "ronove.jpg",
+            "from": "Umineko",
+            "comment": "Cookie da."
+        },
+        {
+            "name": "Ikalgo",
+            "img": "ikalgo.jpg",
+            "from": "HunterxHunter",
+            "comment": "Big eyebrows and unflinchable loyalty. I wanna cuddle!"
+        }
+        
+    ],
+    "girls": [
+
+    ],
+    "cool": [
+
+    ]
+}

@@ -60,7 +60,7 @@ export default async function (eleventyConfig) {
 		markdownTemplateEngine: "liquid",
 		dir: {
 			input: "src",
-			data: "_includes/_data",
+			data: "_data",
 			output: "_build"
 		},
 	};
