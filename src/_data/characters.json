@@ -29,6 +29,24 @@
             "img": "ikalgo.jpg",
             "from": "HunterxHunter",
             "comment": "Big eyebrows and unflinchable loyalty. I wanna cuddle!"
+        },
+        {
+            "name": "Gordie",
+            "img": "gordie.jpg",
+            "from": "Pokemon Sword",
+            "comment": "Fat boy knows he's gorgeous. Fat boy does a backflip."
+        },
+        {
+            "name": "Yamato",
+            "img": "yamato.jpg",
+            "from": "One Piece",
+            "comment": "Dying mad that he didn't join the crew."
+        },
+        {
+            "name": "Judgement Boy",
+            "img": "judgement.jpg",
+            "from": "Gregory Horror Show",
+            "comment": "First pick for a nightmare blunt rotation. Weirdly gender."
         }
         
     ],

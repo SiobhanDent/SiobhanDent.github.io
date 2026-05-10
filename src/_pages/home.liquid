@@ -11,17 +11,13 @@ eleventyImport: ["characters"]
 {% assign min = 0 %}
 {% assign max = characters.size %}
 {% assign diff = max | minus: min %}
-{% assign randomNumber = "now" | date: "%d" | modulo: diff | plus: min %}
+{% assign randomNumber = "now" | date: "%d%m%y" | modulo: diff | plus: min %}
 {% assign featured = characters.boys[randomNumber] %}
 </head>
-
-{% comment %} {% include "partials/sidenav.liquid" %} {% endcomment %}
 
 <section class="content">
 
   {% include "partials/navbar.liquid" %}
-
-  
 
   <div class="container-general ver">
     <h1 style="margin:0">WELCOME</h1>
@@ -30,7 +26,7 @@ eleventyImport: ["characters"]
       <div class="container-general ver no-background no-border" style="max-width: 60ch;">
         <p>I'm Siobhan! Sometimes I go by Nemo or other things.</p>
         <p>
-          I'm a multimedia artist and game developer based in Naarm, Australia. If you're looking for my games, you can find my itch <a href="siobhan-dent.itch.io">here.</a>
+          I'm a multimedia artist and game developer based in Naarm, Australia. If you're looking for my games, you can find my itch <a href="https://siobhan-dent.itch.io">here.</a>
         </p>
         <p>
           This is my personal site, where I keep things I don't keep anywhere else, and most of it is very silly :)
@@ -48,25 +44,49 @@ eleventyImport: ["characters"]
     
   </div>
   
-  
-  <img id="featured-love" class="distortion" src="/public/img/featured-love.png">
+  {% comment %} <!-- Second Row -->
+  <div class="container-general hor no-background no-border">
+    <!-- Latest Art -->
+    <div>
+      <h2>Latest Artwork</h2>
+      <div class="container-general ver">
 
-  <p style="text-align: center;">(updated daily, at random)</p>
-  <div class="container-general ver no-background no-border align-center">
-    <div class="container-general hor entry">
-        <div class="container-general ver textbox no-border">
-          <h2 style="margin-bottom: 0;">
-            ❤{{featured.name}}❤
-          </h2>
-          <h3 style="margin-top:0">
-            {{featured.from}}
-          </h3>
-          <p>{{featured.comment}}</p>
-        </div>        
-        <div class="container-general ver picturebox no-border">
-          <img class="picture" src="/public/img/characters/{{featured.img}}">
-        </div>
+      </div>
     </div>
-  </div>
+    <div>
+      <h2>Latest Story</h2>
+      <div class="container-general ver">
+        
+      </div>
+    </div>
+    <div>
+      <h2>Latest Blog Post</h2>
+      <div class="container-general ver">
+        
+      </div>
+    </div>
+  </div> {% endcomment %}
+  
+  <!-- Featured Love -->
+  <img id="featured-love" class="distortion" src="/public/img/featured-love.png">
+      <p style="text-align: center;">(updated daily, at random)</p>
+      <div class="container-general ver no-background no-border align-center">
+        <div class="container-general hor entry">
+            <div class="container-general ver textbox no-border">
+              <h2 style="margin-bottom: 0;">
+                ❤{{featured.name}}❤
+              </h2>
+              <h3 style="margin-top:0">
+                {{featured.from}}
+              </h3>
+              <p>{{featured.comment}}</p>
+            </div>        
+            <div class="container-general ver picturebox no-border">
+              <img class="picture" src="/public/img/characters/{{featured.img}}">
+            </div>
+        </div>
+      </div>
+
+  
   
 </section>

@@ -10,7 +10,7 @@ eleventyImport: ["characters"]
     {% assign min = 0 %}
     {% assign max = characters.size %}
     {% assign diff = max | minus: min %}
-    {% assign randomNumber = "now" | date: "%d" | modulo: diff | plus: min %}
+    {% assign randomNumber = "now" | date: "%d%m%y" | modulo: diff | plus: min %}
     {% assign featured = characters.boys[randomNumber] %}
 </head>
 
@@ -18,9 +18,7 @@ eleventyImport: ["characters"]
 
   {% include "partials/navbar.liquid" %}
 
-  <img id="featured-love" class="distortion" src="/public/img/featured-love.png">
-
-  
+  <img id="featured-love" class="distortion" src="/public/img/featured-love.png"> 
 
   <div class="container-general ver no-background no-border align-center">
 
