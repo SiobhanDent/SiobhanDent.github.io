@@ -41,10 +41,8 @@ body {
     gap: 0.5rem;
     margin:auto;
 
-    /* max-width: 80ch; */
+    max-width: 90ch;
      overflow-y: scroll;
-
-    /* min-width: 75ch; */
 }
 
 /* 
