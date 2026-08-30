@@ -1,0 +1,40 @@
+
+p {
+    margin-bottom: 0.5rem !important;
+}
+
+b {
+    color: darkgoldenrod;
+}
+
+a, a h3 {
+    color: gold;
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    color:goldenrod;
+}
+
+h1 {
+    font-family: "Fredoka";
+}
+
+h3 {
+    margin: 0.5rem;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: double;
+    border-width: 5px;
+}
+
+.heading {
+    margin-top: 1rem;
+}
+
+#copyright {
+    visibility: hidden;
+}
