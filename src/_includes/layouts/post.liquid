@@ -1,0 +1,63 @@
+---
+title: Post
+---
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+
+  <title>{{ title }}</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/partials/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <script src="/js/vendor/jquery.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/node_modules/three/build/three.module.js",
+      "three/addons/": "/node_modules/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <img class="bg" src="/public/img/atoms.png">
+  
+  <section class="content">
+  <h1>{{title}}</h1>
+  <div class="container-general ver">    
+    {{content}}
+  </div>
+  </section>
+
+  {% include "partials/footer.liquid" %}
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+
+
+
+</html>

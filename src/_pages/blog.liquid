@@ -1,0 +1,27 @@
+---
+layout: "layouts/base.liquid"
+title: "BLOG"
+permalink: /blog.html
+eleventyImport:
+  collections: ["blog"]
+---
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/pages/writing.css">
+</head>
+
+<section class="content">
+
+  {% include "partials/navbar.liquid" %}
+
+  <div class="container-general ver">
+    {%  for post in collections.blog reversed %} 
+      <div class="listEntry">
+        <a href="{{post.url}}">{{post.data.title}}</a>
+        <p class="meta">{{post.data.date | date: "%d/%m/%Y"}}</p>
+      </div> 
+    {% endfor %}
+  </div>
+</section>
+
+{% include "partials/footer.liquid" %}

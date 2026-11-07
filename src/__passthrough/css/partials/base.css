@@ -1,0 +1,15 @@
+.bg {
+    image-rendering: pixelated;
+    z-index: -5;
+
+    object-fit:cover;
+    position: absolute;
+    left:0;
+    bottom: 0;
+
+    /* min-width: 1920px; */
+    min-height: 1080px;
+
+    width: 100%;
+    height: 100%;
+}

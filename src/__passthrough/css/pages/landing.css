@@ -1,0 +1,28 @@
+:root {
+    --logo: #A0895E;
+    --logo-shadow: #6ee315;
+}
+
+#landing-content {
+    overflow: hidden;
+}
+
+.logo {
+    color: var(--txt-secondary);
+    text-align: center;
+}
+
+.sludgeheart {
+    margin:auto;
+    image-rendering: pixelated;
+    transform: scale(100%);
+    transition: transform 0.25s;
+}
+
+.sludgeheart:hover {
+    transform: scale(105%);
+}
+
+.sludgeheart img {
+    max-width: 99%;
+}
