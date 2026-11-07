@@ -1,0 +1,143 @@
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #000000ba;
+    --bg-tertiary: #9c9ccdbe;
+    --txt-primary: #ffffff;
+    --txt-secondary: #ffc9ff;
+    --txt-tertiary: rgb(225, 163, 236);
+    
+    --hr-colour: #ccc;
+
+    background-color: var(--bg-primary);
+    color: var(--txt-primary);
+    
+    font-family: "SUSE Mono";
+}
+
+/* 
+============================
+       MAIN PAGE LAYOUT
+============================
+*/
+
+html {
+  overscroll-behavior-y: none;
+}
+
+body {
+    position: absolute;    
+    width: 100%;
+    height: 100%;
+    margin: 1rem 0 0 0;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin:auto;
+
+    max-width: 90ch;
+     overflow-y: scroll;
+}
+
+/* 
+============================
+  ADJUSTMENTS TO BASE TAGS
+============================
+*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--hr-colour);
+    margin: 1em 0;
+    padding: 0;
+}
+
+a {
+    color: var(--txt-tertiary);
+}
+
+a:hover {
+    filter: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="waves" x="0" y="0" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">\
+        <feTurbulence type="turbulence" baseFrequency="0.05 0.05" numOctaves="1" seed="1" stitchTiles="noStitch" result="turbulence">\
+            <animate attributeName="seed" begin="0s" dur="1s" from="0" to="15" repeatCount="indefinite"/>\
+        </feTurbulence>\
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" xChannelSelector="R" yChannelSelector="G" result="displacementMap"/>\
+      </filter>\
+    </svg>#waves');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--txt-secondary);
+}
+
+.distortion {
+    filter: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="waves" x="0" y="0" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">\
+        <feTurbulence type="turbulence" baseFrequency="0.05 0.05" numOctaves="1" seed="1" stitchTiles="noStitch" result="turbulence">\
+            <animate attributeName="seed" begin="0s" dur="1s" from="0" to="15" repeatCount="indefinite"/>\
+        </feTurbulence>\
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" xChannelSelector="R" yChannelSelector="G" result="displacementMap"/>\
+      </filter>\
+    </svg>#waves');
+}
+
+/*
+============================
+  GENERAL PURPOSE CLASSES
+============================
+*/
+
+.container-general {
+    border-radius: 0.5rem;
+    background-color: var(--bg-secondary);
+    padding: 1rem;  
+    display: flex;
+    gap: 0.25rem;
+
+    border: 10px solid transparent;
+    border-image:url("../public/img/stars.gif") 10 repeat;
+}
+
+.ver {
+    flex-direction: column;
+}
+
+.hor {
+    flex-direction: horizontal;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-general p {
+    margin: 0;
+}
+
+.list-header {
+    margin-bottom: 0;
+}
+
+.no-background {
+    background-color: transparent;
+    background: none;
+}
+
+.no-border {
+    border: none;
+    border-image: none;
+}
+
+.align-center {
+    align-items: center;
+}
